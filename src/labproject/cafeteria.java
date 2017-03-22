@@ -87,6 +87,7 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        BackButton = new javax.swing.JButton();
 
         jTextField55.setText("jTextField55");
 
@@ -467,6 +468,14 @@ public class cafeteria extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("Price");
 
+        BackButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        BackButton.setText("Back");
+        BackButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BackButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ModificationPanelLayout = new javax.swing.GroupLayout(ModificationPanel);
         ModificationPanel.setLayout(ModificationPanelLayout);
         ModificationPanelLayout.setHorizontalGroup(
@@ -488,7 +497,8 @@ public class cafeteria extends javax.swing.JFrame {
                 .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(85, 85, 85))
         );
         ModificationPanelLayout.setVerticalGroup(
@@ -520,10 +530,12 @@ public class cafeteria extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jCheckBox6)
                                 .addGap(18, 18, 18)
-                                .addComponent(jCheckBox7))
+                                .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jCheckBox7)
+                                    .addComponent(BackButton)))
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(138, Short.MAX_VALUE))
+                .addContainerGap(137, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -595,9 +607,43 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void Modification_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modification_buttonActionPerformed
         // TODO add your handling code here:
+        //ModificationPanel obj = new ModificationPanel();
         mainPanel.setVisible(false);
+        loginPanel.setVisible(false);
+        ModificationPanel.setVisible(true);
+        String Show_me_modification_Panel = "Show Me Modification Panel";
+        ShowAccurateJpanel(Show_me_modification_Panel);
+        
+        
     }//GEN-LAST:event_Modification_buttonActionPerformed
+      //BackButton kaj koranor jonno kisu code lekhlam.. 621-645 porjonto
+    
+    private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
+        // TODO add your handling code here:
+        mainPanel.setVisible(true);
+        ModificationPanel.setVisible(false);
+        loginPanel.setVisible(false);
+        
+        String Show_me_main_Panel = "Show Me Main Panel";
+        ShowAccurateJpanel(Show_me_main_Panel);
+        
+    }//GEN-LAST:event_BackButtonActionPerformed
 
+    private void ShowAccurateJpanel(String Show_accurate){
+        
+        if("Show Me Main Panel".equals(Show_accurate) ){
+         mainPanel.setVisible(true);
+         ModificationPanel.setVisible(false);
+         loginPanel.setVisible(false);
+        }
+        
+        if("Show Me Modification Panel".equals(Show_accurate)){
+         mainPanel.setVisible(false);
+         ModificationPanel.setVisible(true);
+         loginPanel.setVisible(false);
+        }
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -634,6 +680,7 @@ public class cafeteria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BackButton;
     private javax.swing.JPanel ModificationPanel;
     private javax.swing.JButton Modification_button;
     private javax.swing.JButton bLogin;
