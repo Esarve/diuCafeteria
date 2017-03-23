@@ -384,12 +384,25 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Password:");
 
+        tfUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        tfUsername.setText("Enter Username");
+        tfUsername.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tfUsernameMouseClicked(evt);
+            }
+        });
         tfUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfUsernameActionPerformed(evt);
             }
         });
 
+        pfPassword.setText("enter password");
+        pfPassword.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pfPasswordMouseClicked(evt);
+            }
+        });
         pfPassword.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pfPasswordActionPerformed(evt);
@@ -458,7 +471,7 @@ public class cafeteria extends javax.swing.JFrame {
                 .addComponent(cbRemember)
                 .addGap(18, 18, 18)
                 .addComponent(bLogin)
-                .addContainerGap(154, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
 
         ModificationPanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -561,7 +574,7 @@ public class cafeteria extends javax.swing.JFrame {
                                     .addComponent(BackButton)))
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(102, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -690,6 +703,14 @@ public class cafeteria extends javax.swing.JFrame {
         isLoggedOut=true;
     }//GEN-LAST:event_bLogOutActionPerformed
 
+    private void tfUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfUsernameMouseClicked
+        this.tfUsername.setText("");
+    }//GEN-LAST:event_tfUsernameMouseClicked
+
+    private void pfPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pfPasswordMouseClicked
+        this.pfPassword.setText("");
+    }//GEN-LAST:event_pfPasswordMouseClicked
+
     private void ShowAccurateJpanel(String Show_accurate){
         
         if("Show Me Main Panel".equals(Show_accurate) ){
@@ -741,6 +762,7 @@ public class cafeteria extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 new cafeteria().setVisible(true);
           //      new cafeteria().mainPanel.setVisible(false);
