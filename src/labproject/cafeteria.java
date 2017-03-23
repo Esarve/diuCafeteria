@@ -5,6 +5,7 @@
  */
 package labproject;
 
+import java.util.LinkedList;
 /**
  *
  * @author sourav
@@ -105,24 +106,29 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.setBackground(java.awt.Color.white);
         mainPanel.setForeground(java.awt.Color.white);
         mainPanel.setPreferredSize(new java.awt.Dimension(736, 630));
+        mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        cbItem1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbItem1.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem1ActionPerformed(evt);
             }
         });
+        mainPanel.add(cbItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 70, -1, -1));
 
         jTextField1.setEditable(false);
+        mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 70, 55, -1));
 
         jTextField2.setEditable(false);
+        mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 121, 55, -1));
 
-        cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem2ActionPerformed(evt);
             }
         });
+        mainPanel.add(cbItem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 121, -1, -1));
 
         jTextField3.setEditable(false);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
@@ -130,13 +136,15 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField3ActionPerformed(evt);
             }
         });
+        mainPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 172, 55, -1));
 
-        cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem3ActionPerformed(evt);
             }
         });
+        mainPanel.add(cbItem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 172, -1, -1));
 
         jTextField4.setEditable(false);
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
@@ -144,64 +152,90 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
+        mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 325, 55, -1));
 
         jTextField5.setEditable(false);
+        mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 274, 55, -1));
 
         jTextField6.setEditable(false);
+        mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 223, 55, -1));
 
-        cmItem6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cmItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmItem6ActionPerformed(evt);
             }
         });
+        mainPanel.add(cmItem6, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 325, -1, -1));
 
-        cmItem5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmItem5.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cmItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmItem5ActionPerformed(evt);
             }
         });
+        mainPanel.add(cmItem5, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 274, -1, -1));
 
-        cbItem4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbItem4.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem4ActionPerformed(evt);
             }
         });
+        mainPanel.add(cbItem4, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 223, -1, -1));
+        mainPanel.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 121, 51, -1));
 
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
             }
         });
+        mainPanel.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 70, 51, -1));
 
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField9ActionPerformed(evt);
             }
         });
+        mainPanel.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 172, 51, -1));
+        mainPanel.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 223, 51, -1));
+        mainPanel.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 274, 51, -1));
+        mainPanel.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 325, 51, -1));
+        mainPanel.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 121, 235, -1));
+        mainPanel.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 70, 235, -1));
 
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField15ActionPerformed(evt);
             }
         });
+        mainPanel.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 172, 235, -1));
+        mainPanel.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 223, 235, -1));
+        mainPanel.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 274, 235, -1));
+        mainPanel.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 325, 235, -1));
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
+        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 439, 664, 103));
+
         jLabel5.setText("Items ");
+        mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 37, -1, -1));
 
         jLabel6.setText("Price");
+        mainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 37, 55, -1));
 
         jLabel7.setText("Quantity");
+        mainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 37, -1, -1));
 
         jLabel8.setText("Total Price");
+        mainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 37, -1, -1));
 
         jLabel9.setText("Final Bill");
+        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 406, -1, -1));
+        mainPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 384, 664, 10));
 
         Modification_button.setText("Edit Items");
         Modification_button.addActionListener(new java.awt.event.ActionListener() {
@@ -209,6 +243,7 @@ public class cafeteria extends javax.swing.JFrame {
                 Modification_buttonActionPerformed(evt);
             }
         });
+        mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 560, -1, -1));
 
         bLogOut.setText("Log Out");
         bLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -216,173 +251,30 @@ public class cafeteria extends javax.swing.JFrame {
                 bLogOutActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel9)
-                    .addComponent(jScrollPane1)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                                                .addGap(1, 1, 1)
-                                                .addComponent(jLabel5)
-                                                .addGap(111, 111, 111))
-                                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                                .addComponent(cbItem2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(66, 66, 66)))
-                                        .addGroup(mainPanelLayout.createSequentialGroup()
-                                            .addComponent(cbItem3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(66, 66, 66)))
-                                    .addGroup(mainPanelLayout.createSequentialGroup()
-                                        .addComponent(cbItem4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(66, 66, 66)))
-                                .addGroup(mainPanelLayout.createSequentialGroup()
-                                    .addComponent(cmItem5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(66, 66, 66)))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cmItem6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cbItem1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField5)
-                            .addComponent(jTextField6)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField3))
-                        .addGap(66, 66, 66)
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, mainPanelLayout.createSequentialGroup()
-                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                        .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                                        .addComponent(jTextField12))
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(102, 102, 102))
-                            .addGroup(mainPanelLayout.createSequentialGroup()
-                                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(93, 93, 93)))
-                        .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
-                                .addComponent(jTextField13)
-                                .addComponent(jTextField15)
-                                .addComponent(jTextField16)
-                                .addComponent(jTextField17)
-                                .addComponent(jTextField18))))
-                    .addComponent(jSeparator1)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(Modification_button)
-                        .addGap(31, 31, 31)
-                        .addComponent(bLogOut)))
-                .addContainerGap(36, Short.MAX_VALUE))
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(mainPanelLayout.createSequentialGroup()
-                        .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(mainPanelLayout.createSequentialGroup()
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cbItem1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cbItem2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cbItem3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cbItem4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cmItem5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(cmItem6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(mainPanelLayout.createSequentialGroup()
-                            .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(26, 26, 26)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Modification_button)
-                    .addComponent(bLogOut))
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
 
         loginPanel.setBackground(new java.awt.Color(254, 254, 254));
         loginPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(35, 150, 253)));
         loginPanel.setPreferredSize(new java.awt.Dimension(736, 630));
+        loginPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         diuLogoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         diuLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labproject/images/diuEDT.png"))); // NOI18N
+        loginPanel.add(diuLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 70, 503, -1));
 
         jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("C A F E T E R I A");
         jLabel1.setToolTipText("");
+        loginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(211, 180, 313, 38));
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel2.setText("Username:");
+        loginPanel.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 310, -1, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Password:");
+        loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 354, -1, -1));
 
         tfUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         tfUsername.setText("Enter Username");
@@ -396,6 +288,7 @@ public class cafeteria extends javax.swing.JFrame {
                 tfUsernameActionPerformed(evt);
             }
         });
+        loginPanel.add(tfUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 307, 242, -1));
 
         pfPassword.setText("enter password");
         pfPassword.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -408,8 +301,10 @@ public class cafeteria extends javax.swing.JFrame {
                 pfPasswordActionPerformed(evt);
             }
         });
+        loginPanel.add(pfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 348, 242, -1));
 
         cbRemember.setText("Remember");
+        loginPanel.add(cbRemember, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 393, -1, -1));
 
         bLogin.setBackground(new java.awt.Color(45, 150, 255));
         bLogin.setForeground(new java.awt.Color(240, 240, 240));
@@ -420,92 +315,54 @@ public class cafeteria extends javax.swing.JFrame {
                 bLoginActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout loginPanelLayout = new javax.swing.GroupLayout(loginPanel);
-        loginPanel.setLayout(loginPanelLayout);
-        loginPanelLayout.setHorizontalGroup(
-            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addContainerGap(116, Short.MAX_VALUE)
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                        .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(loginPanelLayout.createSequentialGroup()
-                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel3)
-                                    .addComponent(jLabel2))
-                                .addGap(18, 18, 18)
-                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tfUsername)
-                                    .addComponent(pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(loginPanelLayout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(bLogin)
-                                    .addComponent(cbRemember))))
-                        .addGap(230, 230, 230))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, loginPanelLayout.createSequentialGroup()
-                        .addComponent(diuLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 503, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115))))
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addGap(210, 210, 210)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        loginPanelLayout.setVerticalGroup(
-            loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(loginPanelLayout.createSequentialGroup()
-                .addGap(69, 69, 69)
-                .addComponent(diuLogoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(89, 89, 89)
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(tfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(pfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(cbRemember)
-                .addGap(18, 18, 18)
-                .addComponent(bLogin)
-                .addContainerGap(196, Short.MAX_VALUE))
-        );
+        loginPanel.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 436, -1, -1));
 
         ModificationPanel.setBackground(new java.awt.Color(255, 255, 255));
         ModificationPanel.setPreferredSize(new java.awt.Dimension(736, 630));
+        ModificationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jCheckBox1.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 413, 136, -1));
 
         jCheckBox2.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 284, 136, -1));
 
         jCheckBox3.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 327, 136, -1));
 
         jCheckBox4.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 370, 136, -1));
 
         jCheckBox5.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 198, 136, -1));
 
         jCheckBox6.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox6, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 456, 136, -1));
 
         jCheckBox7.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 500, 136, -1));
 
         jCheckBox8.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 241, 136, -1));
 
         jCheckBox9.setText("jCheckBox1");
+        ModificationPanel.add(jCheckBox9, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 152, 136, -1));
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton1.setText("ADD");
+        ModificationPanel.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 152, 101, 48));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Item List");
+        ModificationPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(41, 101, 136, 30));
 
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setText("Delete");
+        ModificationPanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 241, 101, 48));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("Price");
+        ModificationPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 327, 101, 48));
 
         BackButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         BackButton.setText("Back");
@@ -514,68 +371,7 @@ public class cafeteria extends javax.swing.JFrame {
                 BackButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout ModificationPanelLayout = new javax.swing.GroupLayout(ModificationPanel);
-        ModificationPanel.setLayout(ModificationPanelLayout);
-        ModificationPanelLayout.setHorizontalGroup(
-            ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ModificationPanelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox9, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox8, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox7, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jCheckBox5, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox6, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox2, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox3, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jCheckBox4, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 373, Short.MAX_VALUE)
-                .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BackButton, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(85, 85, 85))
-        );
-        ModificationPanelLayout.setVerticalGroup(
-            ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ModificationPanelLayout.createSequentialGroup()
-                .addGap(101, 101, 101)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(21, 21, 21)
-                .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(ModificationPanelLayout.createSequentialGroup()
-                        .addComponent(jCheckBox9)
-                        .addGap(21, 21, 21)
-                        .addComponent(jCheckBox5)
-                        .addGap(18, 18, 18)
-                        .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ModificationPanelLayout.createSequentialGroup()
-                                .addComponent(jCheckBox8)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox2))
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ModificationPanelLayout.createSequentialGroup()
-                                .addComponent(jCheckBox3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox1)
-                                .addGap(18, 18, 18)
-                                .addComponent(jCheckBox6)
-                                .addGap(18, 18, 18)
-                                .addGroup(ModificationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jCheckBox7)
-                                    .addComponent(BackButton)))
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(123, Short.MAX_VALUE))
-        );
+        ModificationPanel.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 499, 101, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -627,42 +423,6 @@ public class cafeteria extends javax.swing.JFrame {
     private void tfUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfUsernameActionPerformed
-
-    private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbItem4ActionPerformed
-
-    private void cmItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmItem5ActionPerformed
-
-    private void cmItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cmItem6ActionPerformed
-
-    private void cbItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbItem3ActionPerformed
-
-    private void cbItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbItem2ActionPerformed
-
-    private void cbItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbItem1ActionPerformed
-
-    private void Modification_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modification_buttonActionPerformed
-        // TODO add your handling code here:
-        //ModificationPanel obj = new ModificationPanel();
-        mainPanel.setVisible(false);
-        loginPanel.setVisible(false);
-        ModificationPanel.setVisible(false);
-        String Show_me_modification_Panel = "Show Me Modification Panel";
-        ShowAccurateJpanel(Show_me_modification_Panel);
-        
-        
-    }//GEN-LAST:event_Modification_buttonActionPerformed
       //BackButton kaj koranor jonno kisu code lekhlam.. 621-645 porjonto
     
     private void BackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackButtonActionPerformed
@@ -676,33 +436,6 @@ public class cafeteria extends javax.swing.JFrame {
         
     }//GEN-LAST:event_BackButtonActionPerformed
 
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField9ActionPerformed
-
-    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField15ActionPerformed
-
-    private void bLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogOutActionPerformed
-        mainPanel.setVisible(false);
-        ModificationPanel.setVisible(false);
-        loginPanel.setVisible(true);
-        isLoggedOut=true;
-    }//GEN-LAST:event_bLogOutActionPerformed
-
     private void tfUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfUsernameMouseClicked
         this.tfUsername.setText("");
     }//GEN-LAST:event_tfUsernameMouseClicked
@@ -711,6 +444,71 @@ public class cafeteria extends javax.swing.JFrame {
         this.pfPassword.setText("");
     }//GEN-LAST:event_pfPasswordMouseClicked
 
+    private void bLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogOutActionPerformed
+        mainPanel.setVisible(false);
+        ModificationPanel.setVisible(false);
+        loginPanel.setVisible(true);
+        isLoggedOut=true;
+    }//GEN-LAST:event_bLogOutActionPerformed
+
+    private void Modification_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modification_buttonActionPerformed
+        // TODO add your handling code here:
+        //ModificationPanel obj = new ModificationPanel();
+        mainPanel.setVisible(false);
+        loginPanel.setVisible(false);
+        ModificationPanel.setVisible(false);
+        String Show_me_modification_Panel = "Show Me Modification Panel";
+        ShowAccurateJpanel(Show_me_modification_Panel);
+
+    }//GEN-LAST:event_Modification_buttonActionPerformed
+
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField15ActionPerformed
+
+    private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField9ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbItem4ActionPerformed
+
+    private void cmItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmItem5ActionPerformed
+
+    private void cmItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmItem6ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
+
+    private void cbItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbItem3ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
+
+    private void cbItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbItem2ActionPerformed
+
+    private void cbItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem1ActionPerformed
+
+    }//GEN-LAST:event_cbItem1ActionPerformed
+    
+    private void addItemsToComboboxes(){
+        cbItem1.addItem("COOOOOKKKEEE");
+    }
     private void ShowAccurateJpanel(String Show_accurate){
         
         if("Show Me Main Panel".equals(Show_accurate) ){
@@ -765,12 +563,24 @@ public class cafeteria extends javax.swing.JFrame {
 
             public void run() {
                 new cafeteria().setVisible(true);
-          //      new cafeteria().mainPanel.setVisible(false);
-//         new cafeteria().ModificationPanel.setVisible(false);
-         
             }
+            
         });
     }
+    // Creating a linked list and returning an array of Strings
+    
+    private String[] initializeLinkedlist(){
+        LinkedList<ItemDiscription> newlinkedlist = new LinkedList<ItemDiscription>();
+        newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
+        newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
+        newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20)); 
+        String array[] = new String[newlinkedlist.size()];
+        for(int i=0;i<newlinkedlist.size();i++){
+            array[i]=newlinkedlist.get(i).getItemName();
+        }
+        return array;
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
