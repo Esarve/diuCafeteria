@@ -16,6 +16,10 @@ public class cafeteria extends javax.swing.JFrame {
      */
     public cafeteria() {
         initComponents();
+        mainPanel.setVisible(false);
+         ModificationPanel.setVisible(false);
+         loginPanel.setVisible(true);
+        
     }
     boolean isLoggedOut = false;
     /**
@@ -597,8 +601,13 @@ public class cafeteria extends javax.swing.JFrame {
 //           
 //        }
         
-        loginPanel.setVisible(false);
         mainPanel.setVisible(true);
+        loginPanel.setVisible(false);
+        ModificationPanel.setVisible(false);
+        
+        String show_me_main_panel_after_login_button_press = "show me main panel after login button press";
+        ShowAccurateJpanel(show_me_main_panel_after_login_button_press);
+        
         
     }//GEN-LAST:event_bLoginActionPerformed
 
@@ -689,10 +698,17 @@ public class cafeteria extends javax.swing.JFrame {
          loginPanel.setVisible(false);
         }
         
-        if("Show Me Modification Panel".equals(Show_accurate)){
+        else if("Show Me Modification Panel".equals(Show_accurate)){
          mainPanel.setVisible(false);
          ModificationPanel.setVisible(true);
          loginPanel.setVisible(false);
+        }
+        
+        else if(" show me main panel after login button press".equals(Show_accurate)){
+          mainPanel.setVisible(true);
+         ModificationPanel.setVisible(false);
+         loginPanel.setVisible(false);
+            
         }
     }
     
@@ -727,6 +743,9 @@ public class cafeteria extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new cafeteria().setVisible(true);
+          //      new cafeteria().mainPanel.setVisible(false);
+//         new cafeteria().ModificationPanel.setVisible(false);
+         
             }
         });
     }
