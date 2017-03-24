@@ -7,6 +7,8 @@ package labproject;
 
 import java.util.LinkedList;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 /**
  *
  * @author sourav
@@ -36,9 +38,6 @@ public class cafeteria extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
-        jTextField55 = new javax.swing.JTextField();
-        jTextField56 = new javax.swing.JTextField();
         mainPanel = new javax.swing.JPanel();
         cbItem1 = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
@@ -95,10 +94,6 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-
-        jTextField55.setText("jTextField55");
-
-        jTextField56.setText("jTextField56");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -332,6 +327,7 @@ public class cafeteria extends javax.swing.JFrame {
         loginPanel.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 436, -1, -1));
 
         ModificationPanel.setBackground(new java.awt.Color(255, 255, 255));
+        ModificationPanel.setEnabled(false);
         ModificationPanel.setPreferredSize(new java.awt.Dimension(736, 630));
         ModificationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -365,6 +361,12 @@ public class cafeteria extends javax.swing.JFrame {
             }
         });
         ModificationPanel.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 560, 101, -1));
+
+        tfAddItem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tfAddItemMouseClicked(evt);
+            }
+        });
         ModificationPanel.add(tfAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 160, -1));
         ModificationPanel.add(tfAddPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 160, -1));
         ModificationPanel.add(tfAddQtty, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 160, -1));
@@ -595,7 +597,13 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void bAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddItemActionPerformed
-       newlinkedlist.addLast(new ItemDiscription(tfAddItem.getText(),Double.parseDouble(tfAddPrice.getText()), Integer.parseInt(tfAddQtty.getText())));
+        try {
+           newlinkedlist.addLast(new ItemDiscription(tfAddItem.getText(),Double.parseDouble(tfAddPrice.getText()), Integer.parseInt(tfAddQtty.getText()))); 
+        } catch (Exception e) {
+            JFrame errorFrame = new JFrame("Error");
+            JOptionPane.showMessageDialog(errorFrame,"Please Try a valid input");
+        }
+       
        tfAddItem.setText("");
        tfAddPrice.setText("");
        tfAddQtty.setText("");
@@ -606,6 +614,10 @@ public class cafeteria extends javax.swing.JFrame {
        cbItem5.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
     }//GEN-LAST:event_bAddItemActionPerformed
+
+    private void tfAddItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfAddItemMouseClicked
+
+    }//GEN-LAST:event_tfAddItemMouseClicked
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -707,7 +719,6 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JButton bAddItem;
     private javax.swing.JButton bLogOut;
     private javax.swing.JButton bLogin;
-    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbItem1;
     private javax.swing.JComboBox<String> cbItem2;
     private javax.swing.JComboBox<String> cbItem3;
@@ -747,8 +758,6 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField55;
-    private javax.swing.JTextField jTextField56;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
