@@ -109,7 +109,6 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cbItem1.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-        
         cbItem1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 cbItem1MousePressed(evt);
@@ -117,23 +116,12 @@ public class cafeteria extends javax.swing.JFrame {
         });
         cbItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                
-                Object newItem = cbItem1.getSelectedItem();
                 cbItem1ActionPerformed(evt);
-                 
-                 if(newItem.toString().equals("Coke"))
-                        jTextField1.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField1.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField1.setText("10 tk");
-
             }
         });
         mainPanel.add(cbItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 70, -1, -1));
 
         jTextField1.setEditable(false);
-        //jTextField1.setText("LOL");
         mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 70, 55, -1));
 
         jTextField2.setEditable(false);
@@ -143,16 +131,6 @@ public class cafeteria extends javax.swing.JFrame {
         cbItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem2ActionPerformed(evt);
-
-                Object newItem = cbItem2.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField2.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField2.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField2.setText("10 tk");
-
             }
         });
         mainPanel.add(cbItem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 121, -1, -1));
@@ -169,16 +147,6 @@ public class cafeteria extends javax.swing.JFrame {
         cbItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem3ActionPerformed(evt);
-
-                Object newItem = cbItem3.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField3.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField3.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField3.setText("10 tk");
-
             }
         });
         mainPanel.add(cbItem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 172, -1, -1));
@@ -201,16 +169,6 @@ public class cafeteria extends javax.swing.JFrame {
         cmItem6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmItem6ActionPerformed(evt);
-
-                Object newItem = cmItem6.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField4.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField4.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField4.setText("10 tk");
-
             }
         });
         mainPanel.add(cmItem6, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 325, -1, -1));
@@ -219,16 +177,6 @@ public class cafeteria extends javax.swing.JFrame {
         cmItem5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cmItem5ActionPerformed(evt);
-
-                Object newItem = cmItem5.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField5.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField5.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField5.setText("10 tk");
-
             }
         });
         mainPanel.add(cmItem5, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 274, -1, -1));
@@ -237,16 +185,6 @@ public class cafeteria extends javax.swing.JFrame {
         cbItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbItem4ActionPerformed(evt);
-
-                Object newItem = cbItem4.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField6.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField6.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField6.setText("10 tk");
-
             }
         });
         mainPanel.add(cbItem4, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 223, -1, -1));
@@ -543,14 +481,43 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
         // TODO add your handling code here:
+        
+        Object newItem = cbItem4.getSelectedItem();
+
+                if(newItem.toString().equals("Coke"))
+                        jTextField6.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField6.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField6.setText("10 tk");
+        
+        
     }//GEN-LAST:event_cbItem4ActionPerformed
 
     private void cmItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem5ActionPerformed
         // TODO add your handling code here:
+        Object newItem = cmItem5.getSelectedItem();
+
+                if(newItem.toString().equals("Coke"))
+                        jTextField5.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField5.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField5.setText("10 tk");
+        
     }//GEN-LAST:event_cmItem5ActionPerformed
 
     private void cmItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem6ActionPerformed
         // TODO add your handling code here:
+          Object newItem = cmItem6.getSelectedItem();
+
+                if(newItem.toString().equals("Coke"))
+                        jTextField4.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField4.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField4.setText("10 tk");
+
     }//GEN-LAST:event_cmItem6ActionPerformed
 
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
@@ -559,6 +526,14 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem3ActionPerformed
         // TODO add your handling code here:
+        Object newItem = cbItem3.getSelectedItem();
+
+                if(newItem.toString().equals("Coke"))
+                        jTextField3.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField3.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField3.setText("10 tk");
     }//GEN-LAST:event_cbItem3ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -567,10 +542,28 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem2ActionPerformed
         // TODO add your handling code here:
+           Object newItem = cbItem2.getSelectedItem();
+
+                if(newItem.toString().equals("Coke"))
+                        jTextField2.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField2.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField2.setText("10 tk");
+
     }//GEN-LAST:event_cbItem2ActionPerformed
 
     private void cbItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem1ActionPerformed
                
+        Object newItem = cbItem1.getSelectedItem();
+                
+                 
+                 if(newItem.toString().equals("Coke"))
+                        jTextField1.setText("20 tk");
+                    else if(newItem.toString().equals("Pepsi"))
+                            jTextField1.setText("18 tk");
+                        else if(newItem.toString().equals("Shingara"))
+                            jTextField1.setText("10 tk");
 
     
             }
