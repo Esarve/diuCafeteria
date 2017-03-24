@@ -20,6 +20,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.setVisible(false);
          ModificationPanel.setVisible(false);
          loginPanel.setVisible(true);
+         
         
     }
     boolean isLoggedOut = false;
@@ -122,6 +123,11 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(cbItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 70, -1, -1));
 
         jTextField1.setEditable(false);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
         mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 70, 55, -1));
 
         jTextField2.setEditable(false);
@@ -483,13 +489,16 @@ public class cafeteria extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         Object newItem = cbItem4.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField6.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField6.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField6.setText("10 tk");
+        int index = returnIndex(newItem);
+        System.out.println(index);
+        jTextField6.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//
+//                if(newItem.toString().equals("Coke"))
+//                        jTextField6.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField6.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField6.setText("10 tk");
         
         
     }//GEN-LAST:event_cbItem4ActionPerformed
@@ -497,26 +506,32 @@ public class cafeteria extends javax.swing.JFrame {
     private void cmItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem5ActionPerformed
         // TODO add your handling code here:
         Object newItem = cmItem5.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField5.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField5.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField5.setText("10 tk");
+        int index = returnIndex(newItem);
+        System.out.println(index);
+        jTextField5.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//
+//                if(newItem.toString().equals("Coke"))
+//                        jTextField5.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField5.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField5.setText("10 tk");
         
     }//GEN-LAST:event_cmItem5ActionPerformed
 
     private void cmItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmItem6ActionPerformed
         // TODO add your handling code here:
           Object newItem = cmItem6.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField4.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField4.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField4.setText("10 tk");
+          int index = returnIndex(newItem);
+          System.out.println(index);
+          jTextField4.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//
+//                if(newItem.toString().equals("Coke"))
+//                        jTextField4.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField4.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField4.setText("10 tk");
 
     }//GEN-LAST:event_cmItem6ActionPerformed
 
@@ -527,13 +542,16 @@ public class cafeteria extends javax.swing.JFrame {
     private void cbItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem3ActionPerformed
         // TODO add your handling code here:
         Object newItem = cbItem3.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField3.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField3.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField3.setText("10 tk");
+        int index = returnIndex(newItem);
+        System.out.println(index);
+        jTextField3.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//
+//                if(newItem.toString().equals("Coke"))
+//                        jTextField3.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField3.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField3.setText("10 tk");
     }//GEN-LAST:event_cbItem3ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -543,29 +561,33 @@ public class cafeteria extends javax.swing.JFrame {
     private void cbItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem2ActionPerformed
         // TODO add your handling code here:
            Object newItem = cbItem2.getSelectedItem();
-
-                if(newItem.toString().equals("Coke"))
-                        jTextField2.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField2.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField2.setText("10 tk");
+           int index = returnIndex(newItem);
+           System.out.println(index);
+           jTextField2.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//                if(newItem.toString().equals("Coke"))
+//                        jTextField2.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField2.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField2.setText("10 tk");
 
     }//GEN-LAST:event_cbItem2ActionPerformed
 
     private void cbItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem1ActionPerformed
                
         Object newItem = cbItem1.getSelectedItem();
-                
-                 
-                 if(newItem.toString().equals("Coke"))
-                        jTextField1.setText("20 tk");
-                    else if(newItem.toString().equals("Pepsi"))
-                            jTextField1.setText("18 tk");
-                        else if(newItem.toString().equals("Shingara"))
-                            jTextField1.setText("10 tk");
-
-    
+        int index = returnIndex(newItem);
+        System.out.println(index);
+        jTextField1.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+//                 
+//                 if(newItem.toString().equals("Coke"))
+//                        jTextField1.setText("20 tk");
+//                    else if(newItem.toString().equals("Pepsi"))
+//                            jTextField1.setText("18 tk");
+//                        else if(newItem.toString().equals("Shingara"))
+//                            jTextField1.setText("10 tk");
+//
+//    
             }
    
 
@@ -575,6 +597,10 @@ public class cafeteria extends javax.swing.JFrame {
         // TODO add your handling code here:
  
     }//GEN-LAST:event_cbItem1MousePressed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -634,26 +660,37 @@ public class cafeteria extends javax.swing.JFrame {
             public void run() {
                 new cafeteria().setVisible(true);
             }
-            
         });
-
-    
-     
-
+//        new cafeteria().addItems();
     }
     // Creating a linked list and returning an array of Strings
-    
+    LinkedList<ItemDiscription> newlinkedlist = new LinkedList<>();
+    boolean hasInitialized = false;
+    //hasInitialized is used as a flag. SO that the initilizations may run only once
     private String[] initializeLinkedlist(){
-        LinkedList<ItemDiscription> newlinkedlist = new LinkedList<>();
+        while(!hasInitialized){            
+            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
+            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
+            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
+            hasInitialized=true;
+        }
         
-        newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
-        newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
-        newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20)); 
         String array[] = new String[newlinkedlist.size()];
         for(int i=0;i<newlinkedlist.size();i++){
             array[i]=newlinkedlist.get(i).getItemName();
         }
         return array;
+    }
+    
+    private int returnIndex(Object newItem){
+        int i=0;
+        while (i<newlinkedlist.size()) {
+            if(newItem.toString().equalsIgnoreCase(newlinkedlist.get(i).getItemName())){
+                return i;
+            }
+            i++;
+        }
+        return -1;
     }
     
 
