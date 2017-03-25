@@ -78,7 +78,6 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
         Modification_button = new javax.swing.JButton();
         bLogOut = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -116,6 +115,9 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         cbDeleteItemList = new javax.swing.JComboBox<>();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -342,7 +344,6 @@ public class cafeteria extends javax.swing.JFrame {
 
         jLabel9.setText("Final Bill");
         mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
-        mainPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 384, 664, 10));
 
         Modification_button.setText("Edit Items");
         Modification_button.addActionListener(new java.awt.event.ActionListener() {
@@ -358,7 +359,7 @@ public class cafeteria extends javax.swing.JFrame {
                 bLogOutActionPerformed(evt);
             }
         });
-        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
+        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
 
         jButton4.setText("Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -464,7 +465,7 @@ public class cafeteria extends javax.swing.JFrame {
         diuLogoLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/labproject/images/diuEDT.png"))); // NOI18N
         loginPanel.add(diuLogoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(117, 70, 503, -1));
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Z003", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("C A F E T E R I A");
         jLabel1.setToolTipText("");
@@ -479,6 +480,7 @@ public class cafeteria extends javax.swing.JFrame {
         loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 354, -1, -1));
 
         tfUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
+        tfUsername.setForeground(new java.awt.Color(135, 140, 151));
         tfUsername.setText("Enter Username");
         tfUsername.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -492,6 +494,7 @@ public class cafeteria extends javax.swing.JFrame {
         });
         loginPanel.add(tfUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 307, 242, -1));
 
+        pfPassword.setForeground(new java.awt.Color(130, 135, 147));
         pfPassword.setText("enter password");
         pfPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -531,7 +534,7 @@ public class cafeteria extends javax.swing.JFrame {
                 bAddItemActionPerformed(evt);
             }
         });
-        ModificationPanel.add(bAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 101, 48));
+        ModificationPanel.add(bAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 101, 48));
 
         bDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         bDelete.setText("Delete");
@@ -540,7 +543,7 @@ public class cafeteria extends javax.swing.JFrame {
                 bDeleteActionPerformed(evt);
             }
         });
-        ModificationPanel.add(bDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 101, 48));
+        ModificationPanel.add(bDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, 101, 48));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("Update Price");
@@ -549,7 +552,7 @@ public class cafeteria extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        ModificationPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 460, 130, 48));
+        ModificationPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 130, 48));
 
         BackButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         BackButton.setText("Back");
@@ -558,25 +561,25 @@ public class cafeteria extends javax.swing.JFrame {
                 BackButtonActionPerformed(evt);
             }
         });
-        ModificationPanel.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 560, 101, -1));
+        ModificationPanel.add(BackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 570, 101, -1));
 
         tfAddItem.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tfAddItemMouseClicked(evt);
             }
         });
-        ModificationPanel.add(tfAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 160, -1));
-        ModificationPanel.add(tfAddPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 270, 160, -1));
-        ModificationPanel.add(tfAddQtty, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, 160, -1));
+        ModificationPanel.add(tfAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 160, -1));
+        ModificationPanel.add(tfAddPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 240, 160, -1));
+        ModificationPanel.add(tfAddQtty, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 160, -1));
 
         jLabel4.setText("Item name:");
-        ModificationPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
+        ModificationPanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 130, -1, -1));
 
         jLabel10.setText("Item Price:");
-        ModificationPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        ModificationPanel.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
         jLabel11.setText("Ammount of Item:");
-        ModificationPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
+        ModificationPanel.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
 
         cbItemSelect.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItemSelect.addActionListener(new java.awt.event.ActionListener() {
@@ -584,7 +587,7 @@ public class cafeteria extends javax.swing.JFrame {
                 cbItemSelectActionPerformed(evt);
             }
         });
-        ModificationPanel.add(cbItemSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 140, -1));
+        ModificationPanel.add(cbItemSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 140, -1));
 
         tfDisplayPrice.setEditable(false);
         tfDisplayPrice.setFocusable(false);
@@ -593,20 +596,46 @@ public class cafeteria extends javax.swing.JFrame {
                 tfDisplayPriceActionPerformed(evt);
             }
         });
-        ModificationPanel.add(tfDisplayPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 270, 140, -1));
-        ModificationPanel.add(tfInputPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 140, -1));
+        ModificationPanel.add(tfDisplayPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 240, 140, -1));
+        ModificationPanel.add(tfInputPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 320, 140, -1));
 
         jLabel12.setText("Select Item");
-        ModificationPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
+        ModificationPanel.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 130, -1, -1));
 
         jLabel13.setText("Current Price");
-        ModificationPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+        ModificationPanel.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 210, -1, -1));
 
         jLabel14.setText("New Price");
-        ModificationPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
+        ModificationPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 290, -1, -1));
 
         cbDeleteItemList.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-        ModificationPanel.add(cbDeleteItemList, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, 120, -1));
+        ModificationPanel.add(cbDeleteItemList, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 320, 120, -1));
+
+        jPanel2.setBackground(java.awt.Color.white);
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Add Items"));
+        jPanel2.setLayout(new java.awt.BorderLayout());
+        ModificationPanel.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 220, 500));
+
+        jPanel3.setBackground(java.awt.Color.white);
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Modify Price"));
+        jPanel3.setLayout(new java.awt.BorderLayout());
+        ModificationPanel.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, 200, 500));
+
+        jPanel4.setBackground(java.awt.Color.white);
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Delete Item"));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 158, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 237, Short.MAX_VALUE)
+        );
+
+        ModificationPanel.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 170, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1213,8 +1242,10 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
