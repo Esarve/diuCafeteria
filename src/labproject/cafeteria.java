@@ -140,6 +140,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(cbItem1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 70, -1, -1));
 
         jTextField1.setEditable(false);
+        jTextField1.setFocusable(false);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -148,6 +149,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 55, -1));
 
         jTextField2.setEditable(false);
+        jTextField2.setFocusable(false);
         mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 55, -1));
 
         cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
@@ -159,6 +161,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(cbItem2, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 121, -1, -1));
 
         jTextField3.setEditable(false);
+        jTextField3.setFocusable(false);
         jTextField3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField3ActionPerformed(evt);
@@ -175,6 +178,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(cbItem3, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 172, -1, -1));
 
         jTextField4.setEditable(false);
+        jTextField4.setFocusable(false);
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField4ActionPerformed(evt);
@@ -183,9 +187,11 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 55, -1));
 
         jTextField5.setEditable(false);
+        jTextField5.setFocusable(false);
         mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 55, -1));
 
         jTextField6.setEditable(false);
+        jTextField6.setFocusable(false);
         mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 55, -1));
 
         cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
@@ -285,12 +291,15 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 51, -1));
 
         jTextField13.setEditable(false);
+        jTextField13.setFocusable(false);
         mainPanel.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 121, 235, -1));
 
         jTextField14.setEditable(false);
+        jTextField14.setFocusable(false);
         mainPanel.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 70, 235, -1));
 
         jTextField15.setEditable(false);
+        jTextField15.setFocusable(false);
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField15ActionPerformed(evt);
@@ -299,20 +308,25 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 172, 235, -1));
 
         jTextField16.setEditable(false);
+        jTextField16.setFocusable(false);
         mainPanel.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 223, 235, -1));
 
         jTextField17.setEditable(false);
+        jTextField17.setFocusable(false);
         mainPanel.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 274, 235, -1));
 
         jTextField18.setEditable(false);
+        jTextField18.setFocusable(false);
         mainPanel.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 325, 235, -1));
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
+        jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 439, 664, 103));
+        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 664, 110));
 
         jLabel5.setText("Items ");
         mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 37, -1, -1));
@@ -327,7 +341,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 37, -1, -1));
 
         jLabel9.setText("Final Bill");
-        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 406, -1, -1));
+        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
         mainPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 384, 664, 10));
 
         Modification_button.setText("Edit Items");
@@ -347,12 +361,18 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 560, -1, -1));
 
         jButton4.setText("Order");
-        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(605, 390, 90, -1));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, 90, -1));
 
         jLabel15.setText("Stock");
         mainPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 55, -1));
 
         jTextField19.setEditable(false);
+        jTextField19.setFocusable(false);
         jTextField19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField19ActionPerformed(evt);
@@ -366,6 +386,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 51, -1));
 
         jTextField20.setEditable(false);
+        jTextField20.setFocusable(false);
         jTextField20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField20ActionPerformed(evt);
@@ -379,6 +400,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 51, -1));
 
         jTextField21.setEditable(false);
+        jTextField21.setFocusable(false);
         jTextField21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField21ActionPerformed(evt);
@@ -392,6 +414,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 51, -1));
 
         jTextField22.setEditable(false);
+        jTextField22.setFocusable(false);
         jTextField22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField22ActionPerformed(evt);
@@ -405,6 +428,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 51, -1));
 
         jTextField23.setEditable(false);
+        jTextField23.setFocusable(false);
         jTextField23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField23ActionPerformed(evt);
@@ -418,6 +442,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 51, -1));
 
         jTextField24.setEditable(false);
+        jTextField24.setFocusable(false);
         jTextField24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField24ActionPerformed(evt);
@@ -562,6 +587,7 @@ public class cafeteria extends javax.swing.JFrame {
         ModificationPanel.add(cbItemSelect, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 190, 140, -1));
 
         tfDisplayPrice.setEditable(false);
+        tfDisplayPrice.setFocusable(false);
         tfDisplayPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfDisplayPriceActionPerformed(evt);
@@ -688,6 +714,8 @@ public class cafeteria extends javax.swing.JFrame {
         this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
         this.QuantityToString = String.format("%.2f",this.Quantity);
         jTextField14.setText(this.QuantityToString );
+//        Object newObject=jTextField8.getText();
+//        newQtty(Integer.parseInt(jTextField8.getText()),newObject);
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
@@ -1032,6 +1060,10 @@ public class cafeteria extends javax.swing.JFrame {
         newlinkedlist.remove(index);
         refreshCB();
     }//GEN-LAST:event_bDeleteActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        jTextArea1.setText("");
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -1099,7 +1131,7 @@ public class cafeteria extends javax.swing.JFrame {
     boolean hasInitialized = false;
     //hasInitialized is used as a flag. SO that the initilizations may run only once
     private String[] initializeLinkedlist(){
-        while(!hasInitialized){            
+        while(!hasInitialized){
             newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
             newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
             newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
@@ -1138,6 +1170,12 @@ public class cafeteria extends javax.swing.JFrame {
     private int returnQtty(Object newItem){
         return newlinkedlist.get(returnIndex(newItem)).getQuantity();
     }
+//    private void newQtty(int ordered, Object newItem){
+//        int index= returnIndex(newItem);
+//        double price=newlinkedlist.get(index).getPrice();
+//        newlinkedlist.set(index,new ItemDiscription(newItem.toString(), price, returnQtty(newItem)-ordered));
+//        
+//    }
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -94,6 +94,7 @@
         <Component class="javax.swing.JTextField" name="jTextField1">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField1ActionPerformed"/>
@@ -107,6 +108,7 @@
         <Component class="javax.swing.JTextField" name="jTextField2">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -135,6 +137,7 @@
         <Component class="javax.swing.JTextField" name="jTextField3">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField3ActionPerformed"/>
@@ -166,6 +169,7 @@
         <Component class="javax.swing.JTextField" name="jTextField4">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField4ActionPerformed"/>
@@ -179,6 +183,7 @@
         <Component class="javax.swing.JTextField" name="jTextField5">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -189,6 +194,7 @@
         <Component class="javax.swing.JTextField" name="jTextField6">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -319,6 +325,7 @@
         <Component class="javax.swing.JTextField" name="jTextField13">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -329,6 +336,7 @@
         <Component class="javax.swing.JTextField" name="jTextField14">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -339,6 +347,7 @@
         <Component class="javax.swing.JTextField" name="jTextField15">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField15ActionPerformed"/>
@@ -352,6 +361,7 @@
         <Component class="javax.swing.JTextField" name="jTextField16">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -362,6 +372,7 @@
         <Component class="javax.swing.JTextField" name="jTextField17">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -372,6 +383,7 @@
         <Component class="javax.swing.JTextField" name="jTextField18">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -385,7 +397,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="36" y="439" width="664" height="103"/>
+              <AbsoluteConstraints x="40" y="430" width="664" height="110"/>
             </Constraint>
           </Constraints>
 
@@ -395,7 +407,9 @@
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
                 <Property name="columns" type="int" value="20"/>
+                <Property name="lineWrap" type="boolean" value="true"/>
                 <Property name="rows" type="int" value="5"/>
+                <Property name="wrapStyleWord" type="boolean" value="true"/>
               </Properties>
             </Component>
           </SubComponents>
@@ -446,7 +460,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="36" y="406" width="-1" height="-1"/>
+              <AbsoluteConstraints x="40" y="400" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -487,9 +501,12 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Order"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+          </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="605" y="390" width="90" height="-1"/>
+              <AbsoluteConstraints x="610" y="390" width="90" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -506,6 +523,7 @@
         <Component class="javax.swing.JTextField" name="jTextField19">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField19ActionPerformed"/>
@@ -520,6 +538,7 @@
         <Component class="javax.swing.JTextField" name="jTextField20">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField20ActionPerformed"/>
@@ -534,6 +553,7 @@
         <Component class="javax.swing.JTextField" name="jTextField21">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField21ActionPerformed"/>
@@ -548,6 +568,7 @@
         <Component class="javax.swing.JTextField" name="jTextField22">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField22ActionPerformed"/>
@@ -562,6 +583,7 @@
         <Component class="javax.swing.JTextField" name="jTextField23">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField23ActionPerformed"/>
@@ -576,6 +598,7 @@
         <Component class="javax.swing.JTextField" name="jTextField24">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField24ActionPerformed"/>
@@ -877,6 +900,7 @@
         <Component class="javax.swing.JTextField" name="tfDisplayPrice">
           <Properties>
             <Property name="editable" type="boolean" value="false"/>
+            <Property name="focusable" type="boolean" value="false"/>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfDisplayPriceActionPerformed"/>
