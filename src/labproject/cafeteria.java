@@ -100,7 +100,7 @@ public class cafeteria extends javax.swing.JFrame {
         bLogin = new javax.swing.JButton();
         ModificationPanel = new javax.swing.JPanel();
         bAddItem = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        bDelete = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
         tfAddItem = new javax.swing.JTextField();
@@ -115,6 +115,7 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        cbDeleteItemList = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -144,10 +145,10 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 55, -1));
+        mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 55, -1));
 
         jTextField2.setEditable(false);
-        mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 55, -1));
+        mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 55, -1));
 
         cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +164,7 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField3ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 55, -1));
+        mainPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 170, 55, -1));
 
         cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -179,13 +180,13 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 55, -1));
+        mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 55, -1));
 
         jTextField5.setEditable(false);
-        mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 55, -1));
+        mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 270, 55, -1));
 
         jTextField6.setEditable(false);
-        mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 55, -1));
+        mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 55, -1));
 
         cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -317,7 +318,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 37, -1, -1));
 
         jLabel6.setText("Price");
-        mainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 55, -1));
+        mainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 40, 55, -1));
 
         jLabel7.setText("Quantity");
         mainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
@@ -507,9 +508,14 @@ public class cafeteria extends javax.swing.JFrame {
         });
         ModificationPanel.add(bAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 460, 101, 48));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton2.setText("Delete");
-        ModificationPanel.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 101, 48));
+        bDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bDelete.setText("Delete");
+        bDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDeleteActionPerformed(evt);
+            }
+        });
+        ModificationPanel.add(bDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 460, 101, 48));
 
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setText("Update Price");
@@ -572,6 +578,9 @@ public class cafeteria extends javax.swing.JFrame {
 
         jLabel14.setText("New Price");
         ModificationPanel.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 320, -1, -1));
+
+        cbDeleteItemList.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
+        ModificationPanel.add(cbDeleteItemList, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 350, 120, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -689,7 +698,7 @@ public class cafeteria extends javax.swing.JFrame {
          this.PRICE  = newlinkedlist.get(index).getPrice();
          this.Left_Quantity = newlinkedlist.get(index).getQuantity();
          
-         System.out.println(this.PRICE);
+//         System.out.println(this.PRICE);
         jTextField6.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField23.setText(Integer.toString((int)(this.Left_Quantity)));
 //
@@ -710,7 +719,7 @@ public class cafeteria extends javax.swing.JFrame {
         this.PRICE = newlinkedlist.get(index).getPrice();
         this.Left_Quantity = newlinkedlist.get(index).getQuantity();
        
-        System.out.println(this.PRICE);
+//        System.out.println(this.PRICE);
         jTextField5.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField19.setText(Integer.toString((int)(this.Left_Quantity)));
 //
@@ -755,7 +764,7 @@ public class cafeteria extends javax.swing.JFrame {
          this.PRICE  = newlinkedlist.get(index).getPrice();
          this.Left_Quantity = newlinkedlist.get(index).getQuantity();
          
-         System.out.println(this.PRICE);
+//         System.out.println(this.PRICE);
          
         jTextField3.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField22.setText(Integer.toString((int)(this.Left_Quantity)));
@@ -778,7 +787,7 @@ public class cafeteria extends javax.swing.JFrame {
             int index = returnIndex(newItem);
             this.PRICE  = newlinkedlist.get(index).getPrice();
             
-            System.out.println(this.PRICE);
+//            System.out.println(this.PRICE);
            jTextField2.setText(Double.toString(newlinkedlist.get(index).getPrice()));
            jTextField21.setText(Integer.toString((int)(this.Left_Quantity)));
 
@@ -1016,6 +1025,13 @@ public class cafeteria extends javax.swing.JFrame {
         evt.consume();
     } 
     }//GEN-LAST:event_jTextField12KeyTyped
+
+    private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
+        Object newItem = cbDeleteItemList.getSelectedItem();
+        int index=returnIndex(newItem);
+        newlinkedlist.remove(index);
+        refreshCB();
+    }//GEN-LAST:event_bDeleteActionPerformed
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -1106,6 +1122,7 @@ public class cafeteria extends javax.swing.JFrame {
        cbItem5.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItemSelect.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
+       cbDeleteItemList.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
     }
     private int returnIndex(Object newItem){
         int i=0;
@@ -1128,8 +1145,10 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JPanel ModificationPanel;
     private javax.swing.JButton Modification_button;
     private javax.swing.JButton bAddItem;
+    private javax.swing.JButton bDelete;
     private javax.swing.JButton bLogOut;
     private javax.swing.JButton bLogin;
+    private javax.swing.JComboBox<String> cbDeleteItemList;
     private javax.swing.JComboBox<String> cbItem1;
     private javax.swing.JComboBox<String> cbItem2;
     private javax.swing.JComboBox<String> cbItem3;
@@ -1139,7 +1158,6 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbItemSelect;
     private javax.swing.JRadioButton cbRemember;
     private javax.swing.JLabel diuLogoLabel;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
