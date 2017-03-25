@@ -5,6 +5,7 @@
  */
 package labproject;
 
+import java.awt.event.KeyEvent;
 import java.util.LinkedList;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -14,6 +15,13 @@ import javax.swing.JOptionPane;
  * @author sourav
  */
 public class cafeteria extends javax.swing.JFrame {
+    
+     public double Quantity , PRICE;
+    public int Order_Quantity;
+    public String QuantityToString;
+    public double Left_Quantity;
+    public int OrderByUserQuantity;
+
 
     /**
      * Creates new form cafeteria
@@ -74,6 +82,13 @@ public class cafeteria extends javax.swing.JFrame {
         Modification_button = new javax.swing.JButton();
         bLogOut = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        jTextField19 = new javax.swing.JTextField();
+        jTextField20 = new javax.swing.JTextField();
+        jTextField21 = new javax.swing.JTextField();
+        jTextField22 = new javax.swing.JTextField();
+        jTextField23 = new javax.swing.JTextField();
+        jTextField24 = new javax.swing.JTextField();
         loginPanel = new javax.swing.JPanel();
         diuLogoLabel = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -129,10 +144,10 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField1ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 70, 55, -1));
+        mainPanel.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 55, -1));
 
         jTextField2.setEditable(false);
-        mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 121, 55, -1));
+        mainPanel.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 120, 55, -1));
 
         cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +163,7 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField3ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 172, 55, -1));
+        mainPanel.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 55, -1));
 
         cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem3.addActionListener(new java.awt.event.ActionListener() {
@@ -164,13 +179,13 @@ public class cafeteria extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 325, 55, -1));
+        mainPanel.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 55, -1));
 
         jTextField5.setEditable(false);
-        mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 274, 55, -1));
+        mainPanel.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 270, 55, -1));
 
         jTextField6.setEditable(false);
-        mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 223, 55, -1));
+        mainPanel.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 220, 55, -1));
 
         cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
         cbItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -195,35 +210,100 @@ public class cafeteria extends javax.swing.JFrame {
             }
         });
         mainPanel.add(cbItem4, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 223, -1, -1));
-        mainPanel.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 121, 51, -1));
+
+        jTextField7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField7ActionPerformed(evt);
+            }
+        });
+        jTextField7.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField7KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, 51, -1));
 
         jTextField8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField8ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 70, 51, -1));
+        jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField8KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 70, 51, -1));
 
         jTextField9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField9ActionPerformed(evt);
             }
         });
-        mainPanel.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 172, 51, -1));
-        mainPanel.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 223, 51, -1));
-        mainPanel.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 274, 51, -1));
-        mainPanel.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 325, 51, -1));
+        jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField9KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 170, 51, -1));
+
+        jTextField10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField10ActionPerformed(evt);
+            }
+        });
+        jTextField10.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField10KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 220, 51, -1));
+
+        jTextField11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField11ActionPerformed(evt);
+            }
+        });
+        jTextField11.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField11KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 51, -1));
+
+        jTextField12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField12ActionPerformed(evt);
+            }
+        });
+        jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField12KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, 51, -1));
+
+        jTextField13.setEditable(false);
         mainPanel.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 121, 235, -1));
+
+        jTextField14.setEditable(false);
         mainPanel.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 70, 235, -1));
 
+        jTextField15.setEditable(false);
         jTextField15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField15ActionPerformed(evt);
             }
         });
         mainPanel.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 172, 235, -1));
+
+        jTextField16.setEditable(false);
         mainPanel.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 223, 235, -1));
+
+        jTextField17.setEditable(false);
         mainPanel.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 274, 235, -1));
+
+        jTextField18.setEditable(false);
         mainPanel.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 325, 235, -1));
 
         jTextArea1.setEditable(false);
@@ -237,10 +317,10 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(37, 37, -1, -1));
 
         jLabel6.setText("Price");
-        mainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 37, 55, -1));
+        mainPanel.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 40, 55, -1));
 
         jLabel7.setText("Quantity");
-        mainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 37, -1, -1));
+        mainPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, -1, -1));
 
         jLabel8.setText("Total Price");
         mainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(465, 37, -1, -1));
@@ -267,6 +347,87 @@ public class cafeteria extends javax.swing.JFrame {
 
         jButton4.setText("Order");
         mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(605, 390, 90, -1));
+
+        jLabel15.setText("Stock");
+        mainPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, 55, -1));
+
+        jTextField19.setEditable(false);
+        jTextField19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField19ActionPerformed(evt);
+            }
+        });
+        jTextField19.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField19KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 270, 51, -1));
+
+        jTextField20.setEditable(false);
+        jTextField20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField20ActionPerformed(evt);
+            }
+        });
+        jTextField20.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField20KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 70, 51, -1));
+
+        jTextField21.setEditable(false);
+        jTextField21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField21ActionPerformed(evt);
+            }
+        });
+        jTextField21.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField21KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, 51, -1));
+
+        jTextField22.setEditable(false);
+        jTextField22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField22ActionPerformed(evt);
+            }
+        });
+        jTextField22.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField22KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField22, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, 51, -1));
+
+        jTextField23.setEditable(false);
+        jTextField23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField23ActionPerformed(evt);
+            }
+        });
+        jTextField23.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField23KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField23, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 51, -1));
+
+        jTextField24.setEditable(false);
+        jTextField24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField24ActionPerformed(evt);
+            }
+        });
+        jTextField24.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField24KeyTyped(evt);
+            }
+        });
+        mainPanel.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 320, 51, -1));
 
         loginPanel.setBackground(new java.awt.Color(254, 254, 254));
         loginPanel.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(35, 150, 253)));
@@ -507,18 +668,30 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField9.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField15.setText(this.QuantityToString );
     }//GEN-LAST:event_jTextField9ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
         // TODO add your handling code here:
+        
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField14.setText(this.QuantityToString );
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
         // TODO add your handling code here:
         
-        Object newItem = cbItem4.getSelectedItem();
-        int index = returnIndex(newItem);
+   Object newItem = cbItem4.getSelectedItem();
+         int index = returnIndex(newItem);
+         this.PRICE  = newlinkedlist.get(index).getPrice();
+         this.Left_Quantity = newlinkedlist.get(index).getQuantity();
+         
+         System.out.println(this.PRICE);
         jTextField6.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+        jTextField23.setText(Integer.toString((int)(this.Left_Quantity)));
 //
 //                if(newItem.toString().equals("Coke"))
 //                        jTextField6.setText("20 tk");
@@ -532,9 +705,14 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem5ActionPerformed
         // TODO add your handling code here:
-        Object newItem = cbItem5.getSelectedItem();
+         Object newItem = cbItem5.getSelectedItem();
         int index = returnIndex(newItem);
+        this.PRICE = newlinkedlist.get(index).getPrice();
+        this.Left_Quantity = newlinkedlist.get(index).getQuantity();
+       
+        System.out.println(this.PRICE);
         jTextField5.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+        jTextField19.setText(Integer.toString((int)(this.Left_Quantity)));
 //
 //                if(newItem.toString().equals("Coke"))
 //                        jTextField5.setText("20 tk");
@@ -547,9 +725,15 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem6ActionPerformed
         // TODO add your handling code here:
-          Object newItem = cbItem6.getSelectedItem();
-          int index = returnIndex(newItem);
+            Object newItem = cbItem6.getSelectedItem();
+           int index = returnIndex(newItem);
+        
+          this.PRICE = newlinkedlist.get(index).getPrice();
+          this.Left_Quantity = newlinkedlist.get(index).getQuantity();
+          
+          System.out.println(this.PRICE);
           jTextField4.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+          jTextField24.setText(Integer.toString((int)(this.Left_Quantity)));
 //
 //                if(newItem.toString().equals("Coke"))
 //                        jTextField4.setText("20 tk");
@@ -566,9 +750,15 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem3ActionPerformed
         // TODO add your handling code here:
-        Object newItem = cbItem3.getSelectedItem();
-        int index = returnIndex(newItem);
+         Object newItem = cbItem3.getSelectedItem();
+         int index = returnIndex(newItem);
+         this.PRICE  = newlinkedlist.get(index).getPrice();
+         this.Left_Quantity = newlinkedlist.get(index).getQuantity();
+         
+         System.out.println(this.PRICE);
+         
         jTextField3.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+        jTextField22.setText(Integer.toString((int)(this.Left_Quantity)));
 //
 //                if(newItem.toString().equals("Coke"))
 //                        jTextField3.setText("20 tk");
@@ -584,9 +774,14 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem2ActionPerformed
         // TODO add your handling code here:
-           Object newItem = cbItem2.getSelectedItem();
-           int index = returnIndex(newItem);
+             Object newItem = cbItem2.getSelectedItem();
+            int index = returnIndex(newItem);
+            this.PRICE  = newlinkedlist.get(index).getPrice();
+            
+            System.out.println(this.PRICE);
            jTextField2.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+           jTextField21.setText(Integer.toString((int)(this.Left_Quantity)));
+
 //                if(newItem.toString().equals("Coke"))
 //                        jTextField2.setText("20 tk");
 //                    else if(newItem.toString().equals("Pepsi"))
@@ -598,9 +793,17 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void cbItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem1ActionPerformed
                
-        Object newItem = cbItem1.getSelectedItem();
-        int index = returnIndex(newItem);
+              Object newItem = cbItem1.getSelectedItem();
+         int index = returnIndex(newItem);
+         this.PRICE  = newlinkedlist.get(index).getPrice();
+         this.Left_Quantity = newlinkedlist.get(index).getQuantity();
+ 
+
+         
         jTextField1.setText(Double.toString(newlinkedlist.get(index).getPrice()));
+        
+
+        jTextField20.setText(Integer.toString((int)(this.Left_Quantity)));
 //                 
 //                 if(newItem.toString().equals("Coke"))
 //                        jTextField1.setText("20 tk");
@@ -676,6 +879,143 @@ public class cafeteria extends javax.swing.JFrame {
         int index = returnIndex(newItem);
         tfDisplayPrice.setText(Double.toString(newlinkedlist.get(index).getPrice()));
     }//GEN-LAST:event_cbItemSelectActionPerformed
+
+    private void jTextField19ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField19ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19ActionPerformed
+
+    private void jTextField19KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField19KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField19KeyTyped
+
+    private void jTextField20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField20ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20ActionPerformed
+
+    private void jTextField20KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField20KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField20KeyTyped
+
+    private void jTextField21ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField21ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21ActionPerformed
+
+    private void jTextField21KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField21KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField21KeyTyped
+
+    private void jTextField22ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField22ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField22ActionPerformed
+
+    private void jTextField22KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField22KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField22KeyTyped
+
+    private void jTextField23ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField23ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23ActionPerformed
+
+    private void jTextField23KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField23KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField23KeyTyped
+
+    private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField24ActionPerformed
+
+    private void jTextField24KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField24KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField24KeyTyped
+
+    private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
+        // TODO add your handling code here:
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField7.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField13.setText(this.QuantityToString );
+    }//GEN-LAST:event_jTextField7ActionPerformed
+
+    private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
+        // TODO add your handling code here:
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField10.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField16.setText(this.QuantityToString );
+    }//GEN-LAST:event_jTextField10ActionPerformed
+
+    private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
+        // TODO add your handling code here:
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField11.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField17.setText(this.QuantityToString );
+        
+    }//GEN-LAST:event_jTextField11ActionPerformed
+
+    private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
+        // TODO add your handling code here:
+        this.Quantity = this.PRICE * Double.parseDouble(jTextField12.getText());
+        this.QuantityToString = String.format("%.2f",this.Quantity);
+        jTextField18.setText(this.QuantityToString );
+    }//GEN-LAST:event_jTextField12ActionPerformed
+
+    private void jTextField8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField8KeyTyped
+
+    private void jTextField7KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField7KeyTyped
+
+    private void jTextField9KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField9KeyTyped
+
+    private void jTextField10KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField10KeyTyped
+
+    private void jTextField11KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField11KeyTyped
+
+    private void jTextField12KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyTyped
+        // TODO add your handling code here:
+                     char iNumber = evt.getKeyChar();
+        if(!(Character.isDigit(iNumber))
+            || (iNumber == KeyEvent.VK_BACK_SPACE)
+            || (iNumber == KeyEvent.VK_DELETE)){
+        evt.consume();
+    } 
+    }//GEN-LAST:event_jTextField12KeyTyped
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -808,6 +1148,7 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -829,7 +1170,13 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField16;
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
+    private javax.swing.JTextField jTextField19;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField20;
+    private javax.swing.JTextField jTextField21;
+    private javax.swing.JTextField jTextField22;
+    private javax.swing.JTextField jTextField23;
+    private javax.swing.JTextField jTextField24;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
