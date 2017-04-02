@@ -126,6 +126,7 @@ public class cafeteria extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("DIU Cafeteria");
         setLocationByPlatform(true);
         setResizable(false);
 
@@ -334,7 +335,7 @@ public class cafeteria extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 664, 110));
+        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 664, 170));
 
         jLabel5.setText("Items ");
         mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, 20));
@@ -349,7 +350,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, -1, -1));
 
         jLabel9.setText("Final Bill");
-        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, -1, -1));
+        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, -1, -1));
 
         Modification_button.setText("Edit Items");
         Modification_button.addActionListener(new java.awt.event.ActionListener() {
@@ -357,7 +358,7 @@ public class cafeteria extends javax.swing.JFrame {
                 Modification_buttonActionPerformed(evt);
             }
         });
-        mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 560, -1, -1));
+        mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, -1, -1));
 
         bLogOut.setText("Log Out");
         bLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -365,7 +366,7 @@ public class cafeteria extends javax.swing.JFrame {
                 bLogOutActionPerformed(evt);
             }
         });
-        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 560, -1, -1));
+        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 580, -1, -1));
 
         jButton4.setText("Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -373,7 +374,7 @@ public class cafeteria extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 390, 90, -1));
+        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 90, -1));
 
         jLabel15.setText("Stock");
         mainPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 55, -1));
@@ -894,6 +895,7 @@ public class cafeteria extends javax.swing.JFrame {
              Object newItem = cbItem2.getSelectedItem();
             int index = returnIndex(newItem);
             this.PRICE  = newlinkedlist.get(index).getPrice();
+            this.Left_Quantity = newlinkedlist.get(index).getQuantity();
             
 //            System.out.println(this.PRICE);
            jTextField2.setText(Double.toString(newlinkedlist.get(index).getPrice()));
@@ -1142,7 +1144,72 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_bDeleteActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jTextArea1.setText("");
+        jTextArea1.setText("Your Orders are: ");
+        String previousinput=jTextArea1.getText();
+        String item;
+        String qtty;
+        String price;
+        String tPrice;
+        double totalBill=0;
+        if (jCheckBox2.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem1.getSelectedItem().toString();
+            price=jTextField1.getText();
+            qtty=jTextField8.getText();
+            tPrice=jTextField14.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+        if (jCheckBox1.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem2.getSelectedItem().toString();
+            price=jTextField2.getText();
+            qtty=jTextField7.getText();
+            tPrice=jTextField13.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+        if (jCheckBox4.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem3.getSelectedItem().toString();
+            price=jTextField3.getText();
+            qtty=jTextField22.getText();
+            tPrice=jTextField15.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+        if (jCheckBox3.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem4.getSelectedItem().toString();
+            price=jTextField6.getText();
+            qtty=jTextField10.getText();
+            tPrice=jTextField16.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+        if (jCheckBox6.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem5.getSelectedItem().toString();
+            price=jTextField5.getText();
+            qtty=jTextField11.getText();
+            tPrice=jTextField17.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+        if (jCheckBox5.isSelected()){
+            previousinput=jTextArea1.getText();
+            item=cbItem6.getSelectedItem().toString();
+            price=jTextField4.getText();
+            qtty=jTextField12.getText();
+            tPrice=jTextField18.getText();
+            totalBill=+Double.parseDouble(tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+        }
+//        previousinput=jTextArea1.getText();
+//        jTextArea1.setText(previousinput+"\n"+"------------------------------------------------------------------");
+        previousinput=jTextArea1.getText();
+        jTextArea1.setText(previousinput+"\n"+"Your total bill is: "+totalBill+" Taka Only");
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
@@ -1263,7 +1330,7 @@ public class cafeteria extends javax.swing.JFrame {
             newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
             newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
             newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
-            newlinkedlist.add(new ItemDiscription("Shomucha", 10.0, 20));
+            newlinkedlist.add(new ItemDiscription("Shomucha", 8.0, 30));
             hasInitialized=true;
         }
         
