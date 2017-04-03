@@ -1175,7 +1175,7 @@ public class cafeteria extends javax.swing.JFrame {
             previousinput=jTextArea1.getText();
             item=cbItem3.getSelectedItem().toString();
             price=jTextField3.getText();
-            qtty=jTextField22.getText();
+            qtty=jTextField9.getText();
             tPrice=jTextField15.getText();
             totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
