@@ -1094,7 +1094,7 @@ public class cafeteria extends javax.swing.JFrame {
         if(!(Character.isDigit(iNumber))
             || (iNumber == KeyEvent.VK_BACK_SPACE)
             || (iNumber == KeyEvent.VK_DELETE)){
-        evt.consume();
+            evt.consume();    
     } 
     }//GEN-LAST:event_jTextField7KeyTyped
 
@@ -1263,63 +1263,126 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jTextField8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyReleased
-
+        this.Quantity=Integer.parseInt(jTextField20.getText());
         try{
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField14.setText(this.QuantityToString );
+            this.Order_Quantity=(int)Double.parseDouble(jTextField8.getText());
         }catch(NumberFormatException e){
-            jTextField14.setText("");
+            this.Order_Quantity=0;
         }
+        if (this.Order_Quantity<=this.Quantity) {
+                try{
+                    this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
+                    this.QuantityToString = String.format("%.2f",this.Quantity);
+                    jTextField14.setText(this.QuantityToString );
+            }catch(NumberFormatException e){
+                jTextField14.setText("");
+            }
+        }else{
+            jTextField14.setText("Not enough in Stock!!!");
+        }
+        
+        
     }//GEN-LAST:event_jTextField8KeyReleased
 
     private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
-        try{
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField7.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField13.setText(this.QuantityToString );
-        }catch(NumberFormatException e){
-            jTextField13.setText("");
+        this.Quantity=Double.parseDouble(jTextField21.getText());
+        try {
+            this.Order_Quantity=Integer.parseInt(jTextField7.getText());
+        } catch (NumberFormatException e) {
+            this.Order_Quantity=0;
         }
+        if (this.Order_Quantity<=this.Quantity) {
+            try{
+                this.Quantity = this.PRICE * Double.parseDouble(jTextField7.getText());
+                this.QuantityToString = String.format("%.2f",this.Quantity);
+                jTextField13.setText(this.QuantityToString );
+            }catch(NumberFormatException e){
+                jTextField13.setText("");
+            }
+        } else {
+            jTextField13.setText("Not Enough in Stock!!!");
+        }
+        
     }//GEN-LAST:event_jTextField7KeyReleased
 
     private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
+        this.Quantity=Double.parseDouble(jTextField22.getText());
         try {
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField9.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField15.setText(this.QuantityToString );
+            this.Order_Quantity=Integer.parseInt(jTextField9.getText());
+        } catch (NumberFormatException e) {
+            this.Order_Quantity=0;
+        }
+        if (this.Order_Quantity<=this.Quantity) {
+            try {
+                this.Quantity = this.PRICE * Double.parseDouble(jTextField9.getText());
+                this.QuantityToString = String.format("%.2f",this.Quantity);
+                jTextField15.setText(this.QuantityToString );
         } catch (NumberFormatException e) {
             jTextField15.setText("");
         }
+        } else {
+            jTextField15.setText("Not Enough in Stock!!!");
+        }
+
     }//GEN-LAST:event_jTextField9KeyReleased
 
     private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyReleased
+        this.Quantity=Double.parseDouble(jTextField23.getText());
         try {
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField10.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField16.setText(this.QuantityToString );
+            this.Order_Quantity=Integer.parseInt(jTextField10.getText());
         } catch (NumberFormatException e) {
-            jTextField16.setText("");
+            this.Order_Quantity=0;
+        }
+        if (this.Order_Quantity<=this.Quantity){
+            try {
+                this.Quantity = this.PRICE * Double.parseDouble(jTextField10.getText());
+                this.QuantityToString = String.format("%.2f",this.Quantity);
+                jTextField16.setText(this.QuantityToString );
+            } catch (NumberFormatException e) {
+                jTextField16.setText("");
+            }
+        }else{
+            jTextField16.setText("Not Enough in Stock!!!");
         }
     }//GEN-LAST:event_jTextField10KeyReleased
 
     private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
+        this.Quantity=Double.parseDouble(jTextField19.getText());
         try {
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField11.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField17.setText(this.QuantityToString );
+            this.Order_Quantity=Integer.parseInt(jTextField11.getText());
         } catch (NumberFormatException e) {
-            jTextField17.setText("");
+            this.Order_Quantity=0;
+        }
+        if (this.Order_Quantity<=this.Quantity){
+            try {
+                this.Quantity = this.PRICE * Double.parseDouble(jTextField11.getText());
+                this.QuantityToString = String.format("%.2f",this.Quantity);
+                jTextField17.setText(this.QuantityToString );
+            } catch (NumberFormatException e) {
+                jTextField17.setText("");
+            }
+        }else{
+            jTextField17.setText("Not Enough in Stock!!!");
         }
     }//GEN-LAST:event_jTextField11KeyReleased
 
     private void jTextField12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyReleased
+        this.Quantity=Double.parseDouble(jTextField24.getText());
         try {
-            this.Quantity = this.PRICE * Double.parseDouble(jTextField12.getText());
-            this.QuantityToString = String.format("%.2f",this.Quantity);
-            jTextField18.setText(this.QuantityToString );
+            this.Order_Quantity=Integer.parseInt(jTextField12.getText());
         } catch (NumberFormatException e) {
-            jTextField18.setText("");
+            this.Order_Quantity=0;
+        }
+        if (this.Order_Quantity<=this.Quantity){
+            try {
+                this.Quantity = this.PRICE * Double.parseDouble(jTextField12.getText());
+                this.QuantityToString = String.format("%.2f",this.Quantity);
+                jTextField18.setText(this.QuantityToString );
+            } catch (NumberFormatException e) {
+                jTextField18.setText("");
+            }
+        }else{
+            jTextField18.setText("Not Enough in Stock!!!");
         }
     }//GEN-LAST:event_jTextField12KeyReleased
     
