@@ -1159,7 +1159,7 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField1.getText();
             qtty=jTextField8.getText();
             tPrice=jTextField14.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
         if (jCheckBox1.isSelected()){
@@ -1168,7 +1168,7 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField2.getText();
             qtty=jTextField7.getText();
             tPrice=jTextField13.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
         if (jCheckBox4.isSelected()){
@@ -1177,7 +1177,7 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField3.getText();
             qtty=jTextField22.getText();
             tPrice=jTextField15.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
         if (jCheckBox3.isSelected()){
@@ -1186,7 +1186,7 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField6.getText();
             qtty=jTextField10.getText();
             tPrice=jTextField16.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
         if (jCheckBox6.isSelected()){
@@ -1195,7 +1195,7 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField5.getText();
             qtty=jTextField11.getText();
             tPrice=jTextField17.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
         if (jCheckBox5.isSelected()){
@@ -1204,13 +1204,13 @@ public class cafeteria extends javax.swing.JFrame {
             price=jTextField4.getText();
             qtty=jTextField12.getText();
             tPrice=jTextField18.getText();
-            totalBill=+Double.parseDouble(tPrice);
+            totalBill+=Double.parseDouble(tPrice);
             jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
         }
-//        previousinput=jTextArea1.getText();
-//        jTextArea1.setText(previousinput+"\n"+"------------------------------------------------------------------");
-        previousinput=jTextArea1.getText();
-        jTextArea1.setText(previousinput+"\n"+"Your total bill is: "+totalBill+" Taka Only");
+       previousinput=jTextArea1.getText();
+       jTextArea1.setText(previousinput+"\n"+"------------------------------------------------------------------");
+       previousinput=jTextArea1.getText();
+       jTextArea1.setText(previousinput+"\n"+"Your total bill is: "+totalBill+" Taka Only");
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
