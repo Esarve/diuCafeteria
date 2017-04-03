@@ -263,11 +263,11 @@ public class cafeteria extends javax.swing.JFrame {
             }
         });
         jTextField9.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField9KeyTyped(evt);
-            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField9KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField9KeyTyped(evt);
             }
         });
         mainPanel.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 51, -1));
@@ -353,7 +353,7 @@ public class cafeteria extends javax.swing.JFrame {
         jTextArea1.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jTextArea1);
 
-        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 664, 170));
+        mainPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, 664, 210));
 
         jLabel5.setText("Items ");
         mainPanel.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, -1, 20));
@@ -368,7 +368,7 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, -1, -1));
 
         jLabel9.setText("Final Bill");
-        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 380, -1, -1));
+        mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
         Modification_button.setText("Edit Items");
         Modification_button.addActionListener(new java.awt.event.ActionListener() {
@@ -376,7 +376,7 @@ public class cafeteria extends javax.swing.JFrame {
                 Modification_buttonActionPerformed(evt);
             }
         });
-        mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 580, -1, -1));
+        mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, -1, -1));
 
         bLogOut.setText("Log Out");
         bLogOut.addActionListener(new java.awt.event.ActionListener() {
@@ -384,7 +384,7 @@ public class cafeteria extends javax.swing.JFrame {
                 bLogOutActionPerformed(evt);
             }
         });
-        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 580, -1, -1));
+        mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 590, -1, -1));
 
         jButton4.setText("Order");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -392,7 +392,7 @@ public class cafeteria extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
-        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 370, 90, -1));
+        mainPanel.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 350, 90, -1));
 
         jLabel15.setText("Stock");
         mainPanel.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 55, -1));
@@ -481,6 +481,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jTextField24, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 320, 51, -1));
 
+        jCheckBox1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox1MouseReleased(evt);
+            }
+        });
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox1ActionPerformed(evt);
@@ -488,6 +493,14 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 60, -1));
 
+        jCheckBox2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jCheckBox2MouseExited(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox2MouseReleased(evt);
+            }
+        });
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox2ActionPerformed(evt);
@@ -495,6 +508,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 60, -1));
 
+        jCheckBox3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox3MouseReleased(evt);
+            }
+        });
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox3ActionPerformed(evt);
@@ -502,6 +520,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jCheckBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 60, -1));
 
+        jCheckBox4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox4MouseReleased(evt);
+            }
+        });
         jCheckBox4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox4ActionPerformed(evt);
@@ -509,6 +532,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 60, -1));
 
+        jCheckBox5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox5MouseReleased(evt);
+            }
+        });
         jCheckBox5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox5ActionPerformed(evt);
@@ -516,6 +544,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, 60, -1));
 
+        jCheckBox6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jCheckBox6MouseReleased(evt);
+            }
+        });
         jCheckBox6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox6ActionPerformed(evt);
@@ -1146,8 +1179,10 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_bDeleteActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        jTextArea1.setText("Your Orders are: ");
-        String previousinput=jTextArea1.getText();
+                jTextArea1.setText("                                                                                              "
+                + "CAFE BANGAL\n"
+                + "\nItem Name\t\tPrice\t\tQuantity\t\tTotal Price\n");
+        String previousinput = jTextArea1.getText();
         String item;
         String qtty;
         String price;
@@ -1160,7 +1195,7 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField8.getText();
             tPrice=jTextField14.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
         if (jCheckBox1.isSelected()){
             previousinput=jTextArea1.getText();
@@ -1169,7 +1204,7 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField7.getText();
             tPrice=jTextField13.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
         if (jCheckBox4.isSelected()){
             previousinput=jTextArea1.getText();
@@ -1178,7 +1213,7 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField9.getText();
             tPrice=jTextField15.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
         if (jCheckBox3.isSelected()){
             previousinput=jTextArea1.getText();
@@ -1187,7 +1222,7 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField10.getText();
             tPrice=jTextField16.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
         if (jCheckBox6.isSelected()){
             previousinput=jTextArea1.getText();
@@ -1196,7 +1231,7 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField11.getText();
             tPrice=jTextField17.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
         if (jCheckBox5.isSelected()){
             previousinput=jTextArea1.getText();
@@ -1205,12 +1240,16 @@ public class cafeteria extends javax.swing.JFrame {
             qtty=jTextField12.getText();
             tPrice=jTextField18.getText();
             totalBill+=Double.parseDouble(tPrice);
-            jTextArea1.setText(previousinput+"\n"+item+"    "+price+"  ×"+qtty+"    =  "+tPrice);
+            jTextArea1.setText(previousinput+"\n"+item+"\t\t"+price+"\t\t"+qtty+"\t\t"+tPrice);
         }
        previousinput=jTextArea1.getText();
-       jTextArea1.setText(previousinput+"\n"+"------------------------------------------------------------------");
+       jTextArea1.setText(previousinput+"\n"+"---------------------"
+               + "-----------------------------------"
+               + "------------------------------------"
+               + "-------------------------------------"
+               + "-----------------------");
        previousinput=jTextArea1.getText();
-       jTextArea1.setText(previousinput+"\n"+"Your total bill is: "+totalBill+" Taka Only");
+       jTextArea1.setText(previousinput+"\n"+"Your total bill is\t\t\t\t\t\t"+totalBill+" Taka Only");
         
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -1391,6 +1430,60 @@ public class cafeteria extends javax.swing.JFrame {
             jTextField18.setText("Not Enough in Stock!!!");
         }
     }//GEN-LAST:event_jTextField12KeyReleased
+
+    private void jCheckBox2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseExited
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jCheckBox2MouseExited
+
+    private void jCheckBox2MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox2MouseReleased
+        // TODO add your handling code here:
+        jTextField1.setText("");
+        jTextField20.setText("");
+        jTextField8.setText("");
+        jTextField14.setText("");
+    }//GEN-LAST:event_jCheckBox2MouseReleased
+
+    private void jCheckBox1MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox1MouseReleased
+        // TODO add your handling code here:
+        jTextField2.setText("");
+        jTextField21.setText("");
+        jTextField7.setText("");
+        jTextField13.setText("");
+    }//GEN-LAST:event_jCheckBox1MouseReleased
+
+    private void jCheckBox4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox4MouseReleased
+        // TODO add your handling code here:
+        jTextField3.setText("");
+        jTextField22.setText("");
+        jTextField9.setText("");
+        jTextField15.setText("");
+    }//GEN-LAST:event_jCheckBox4MouseReleased
+
+    private void jCheckBox3MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox3MouseReleased
+        // TODO add your handling code here:
+        jTextField6.setText("");
+        jTextField23.setText("");
+        jTextField10.setText("");
+        jTextField16.setText("");
+    }//GEN-LAST:event_jCheckBox3MouseReleased
+
+    private void jCheckBox6MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox6MouseReleased
+        // TODO add your handling code here:
+         jTextField5.setText("");
+        jTextField19.setText("");
+        jTextField11.setText("");
+        jTextField17.setText("");
+    }//GEN-LAST:event_jCheckBox6MouseReleased
+
+    private void jCheckBox5MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jCheckBox5MouseReleased
+        // TODO add your handling code here:
+         jTextField4.setText("");
+        jTextField24.setText("");
+        jTextField12.setText("");
+        jTextField18.setText("");
+    }//GEN-LAST:event_jCheckBox5MouseReleased
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
