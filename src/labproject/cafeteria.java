@@ -236,6 +236,9 @@ public class cafeteria extends javax.swing.JFrame {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField7KeyTyped(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField7KeyReleased(evt);
+            }
         });
         mainPanel.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 51, -1));
 
@@ -247,6 +250,9 @@ public class cafeteria extends javax.swing.JFrame {
         jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField8KeyTyped(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField8KeyReleased(evt);
             }
         });
         mainPanel.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 51, -1));
@@ -260,6 +266,9 @@ public class cafeteria extends javax.swing.JFrame {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField9KeyTyped(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField9KeyReleased(evt);
+            }
         });
         mainPanel.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, 51, -1));
 
@@ -271,6 +280,9 @@ public class cafeteria extends javax.swing.JFrame {
         jTextField10.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField10KeyTyped(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField10KeyReleased(evt);
             }
         });
         mainPanel.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 220, 51, -1));
@@ -284,6 +296,9 @@ public class cafeteria extends javax.swing.JFrame {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField11KeyTyped(evt);
             }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField11KeyReleased(evt);
+            }
         });
         mainPanel.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 270, 51, -1));
 
@@ -295,6 +310,9 @@ public class cafeteria extends javax.swing.JFrame {
         jTextField12.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField12KeyTyped(evt);
+            }
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jTextField12KeyReleased(evt);
             }
         });
         mainPanel.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 51, -1));
@@ -784,19 +802,11 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField9ActionPerformed
         // TODO add your handling code here:
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField9.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField15.setText(this.QuantityToString );
+        
     }//GEN-LAST:event_jTextField9ActionPerformed
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-        
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField14.setText(this.QuantityToString );
-//        Object newObject=jTextField8.getText();
-//        newQtty(Integer.parseInt(jTextField8.getText()),newObject);
+       //
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void cbItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem4ActionPerformed
@@ -1049,31 +1059,23 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField7.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField13.setText(this.QuantityToString );
+        
     }//GEN-LAST:event_jTextField7ActionPerformed
 
     private void jTextField10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField10ActionPerformed
         // TODO add your handling code here:
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField10.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField16.setText(this.QuantityToString );
+        
     }//GEN-LAST:event_jTextField10ActionPerformed
 
     private void jTextField11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField11ActionPerformed
         // TODO add your handling code here:
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField11.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField17.setText(this.QuantityToString );
+
         
     }//GEN-LAST:event_jTextField11ActionPerformed
 
     private void jTextField12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField12ActionPerformed
         // TODO add your handling code here:
-        this.Quantity = this.PRICE * Double.parseDouble(jTextField12.getText());
-        this.QuantityToString = String.format("%.2f",this.Quantity);
-        jTextField18.setText(this.QuantityToString );
+        
     }//GEN-LAST:event_jTextField12ActionPerformed
 
     private void jTextField8KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyTyped
@@ -1259,6 +1261,67 @@ public class cafeteria extends javax.swing.JFrame {
             disableRow6();
         }  
     }//GEN-LAST:event_jCheckBox5ActionPerformed
+
+    private void jTextField8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyReleased
+
+        try{
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField8.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField14.setText(this.QuantityToString );
+        }catch(NumberFormatException e){
+            jTextField14.setText("");
+        }
+    }//GEN-LAST:event_jTextField8KeyReleased
+
+    private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        try{
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField7.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField13.setText(this.QuantityToString );
+        }catch(NumberFormatException e){
+            jTextField13.setText("");
+        }
+    }//GEN-LAST:event_jTextField7KeyReleased
+
+    private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
+        try {
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField9.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField15.setText(this.QuantityToString );
+        } catch (NumberFormatException e) {
+            jTextField15.setText("");
+        }
+    }//GEN-LAST:event_jTextField9KeyReleased
+
+    private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyReleased
+        try {
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField10.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField16.setText(this.QuantityToString );
+        } catch (NumberFormatException e) {
+            jTextField16.setText("");
+        }
+    }//GEN-LAST:event_jTextField10KeyReleased
+
+    private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
+        try {
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField11.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField17.setText(this.QuantityToString );
+        } catch (NumberFormatException e) {
+            jTextField17.setText("");
+        }
+    }//GEN-LAST:event_jTextField11KeyReleased
+
+    private void jTextField12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyReleased
+        try {
+            this.Quantity = this.PRICE * Double.parseDouble(jTextField12.getText());
+            this.QuantityToString = String.format("%.2f",this.Quantity);
+            jTextField18.setText(this.QuantityToString );
+        } catch (NumberFormatException e) {
+            jTextField18.setText("");
+        }
+    }//GEN-LAST:event_jTextField12KeyReleased
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
