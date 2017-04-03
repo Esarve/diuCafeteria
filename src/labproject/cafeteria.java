@@ -340,11 +340,11 @@ public class cafeteria extends javax.swing.JFrame {
 
         jTextField17.setEditable(false);
         jTextField17.setFocusable(false);
-        mainPanel.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 274, 190, -1));
+        mainPanel.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 190, -1));
 
         jTextField18.setEditable(false);
         jTextField18.setFocusable(false);
-        mainPanel.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 325, 190, -1));
+        mainPanel.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 320, 190, -1));
 
         jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
@@ -1263,6 +1263,7 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox5ActionPerformed
 
     private void jTextField8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField8KeyReleased
+        this.PRICE=Double.parseDouble(jTextField1.getText());
         this.Quantity=Integer.parseInt(jTextField20.getText());
         try{
             this.Order_Quantity=(int)Double.parseDouble(jTextField8.getText());
@@ -1285,6 +1286,7 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField8KeyReleased
 
     private void jTextField7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField7KeyReleased
+        this.PRICE=Double.parseDouble(jTextField2.getText());
         this.Quantity=Double.parseDouble(jTextField21.getText());
         try {
             this.Order_Quantity=Integer.parseInt(jTextField7.getText());
@@ -1306,6 +1308,7 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField7KeyReleased
 
     private void jTextField9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField9KeyReleased
+        this.PRICE=Double.parseDouble(jTextField3.getText());
         this.Quantity=Double.parseDouble(jTextField22.getText());
         try {
             this.Order_Quantity=Integer.parseInt(jTextField9.getText());
@@ -1327,6 +1330,7 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField9KeyReleased
 
     private void jTextField10KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField10KeyReleased
+        this.PRICE=Double.parseDouble(jTextField6.getText());
         this.Quantity=Double.parseDouble(jTextField23.getText());
         try {
             this.Order_Quantity=Integer.parseInt(jTextField10.getText());
@@ -1348,6 +1352,7 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void jTextField11KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField11KeyReleased
         this.Quantity=Double.parseDouble(jTextField19.getText());
+        this.PRICE=Double.parseDouble(jTextField5.getText());
         try {
             this.Order_Quantity=Integer.parseInt(jTextField11.getText());
         } catch (NumberFormatException e) {
@@ -1367,6 +1372,7 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField11KeyReleased
 
     private void jTextField12KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField12KeyReleased
+        this.PRICE=Double.parseDouble(jTextField4.getText());
         this.Quantity=Double.parseDouble(jTextField24.getText());
         try {
             this.Order_Quantity=Integer.parseInt(jTextField12.getText());
