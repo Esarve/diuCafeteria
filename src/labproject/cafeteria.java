@@ -10,10 +10,7 @@ import java.util.LinkedList;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-/**
- *
- * @author sourav
- */
+
 public class cafeteria extends javax.swing.JFrame {
     
      public double Quantity , PRICE;
@@ -849,19 +846,10 @@ public class cafeteria extends javax.swing.JFrame {
          int index = returnIndex(newItem);
          this.PRICE  = newlinkedlist.get(index).getPrice();
          this.Left_Quantity = newlinkedlist.get(index).getQuantity();
-         
-//         System.out.println(this.PRICE);
+
         jTextField6.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField23.setText(Integer.toString((int)(this.Left_Quantity)));
-//
-//                if(newItem.toString().equals("Coke"))
-//                        jTextField6.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField6.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField6.setText("10 tk");
-        
-        
+      
     }//GEN-LAST:event_cbItem4ActionPerformed
 
     private void cbItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem5ActionPerformed
@@ -871,21 +859,13 @@ public class cafeteria extends javax.swing.JFrame {
         this.PRICE = newlinkedlist.get(index).getPrice();
         this.Left_Quantity = newlinkedlist.get(index).getQuantity();
        
-//        System.out.println(this.PRICE);
         jTextField5.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField19.setText(Integer.toString((int)(this.Left_Quantity)));
-//
-//                if(newItem.toString().equals("Coke"))
-//                        jTextField5.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField5.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField5.setText("10 tk");
-        
+
     }//GEN-LAST:event_cbItem5ActionPerformed
 
     private void cbItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbItem6ActionPerformed
-        // TODO add your handling code here:
+
             Object newItem = cbItem6.getSelectedItem();
            int index = returnIndex(newItem);
         
@@ -895,13 +875,6 @@ public class cafeteria extends javax.swing.JFrame {
           System.out.println(this.PRICE);
           jTextField4.setText(Double.toString(newlinkedlist.get(index).getPrice()));
           jTextField24.setText(Integer.toString((int)(this.Left_Quantity)));
-//
-//                if(newItem.toString().equals("Coke"))
-//                        jTextField4.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField4.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField4.setText("10 tk");
 
     }//GEN-LAST:event_cbItem6ActionPerformed
 
@@ -915,18 +888,10 @@ public class cafeteria extends javax.swing.JFrame {
          int index = returnIndex(newItem);
          this.PRICE  = newlinkedlist.get(index).getPrice();
          this.Left_Quantity = newlinkedlist.get(index).getQuantity();
-         
-//         System.out.println(this.PRICE);
-         
+                
         jTextField3.setText(Double.toString(newlinkedlist.get(index).getPrice()));
         jTextField22.setText(Integer.toString((int)(this.Left_Quantity)));
-//
-//                if(newItem.toString().equals("Coke"))
-//                        jTextField3.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField3.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField3.setText("10 tk");
+
     }//GEN-LAST:event_cbItem3ActionPerformed
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
@@ -939,17 +904,9 @@ public class cafeteria extends javax.swing.JFrame {
             int index = returnIndex(newItem);
             this.PRICE  = newlinkedlist.get(index).getPrice();
             this.Left_Quantity = newlinkedlist.get(index).getQuantity();
-            
-//            System.out.println(this.PRICE);
+
            jTextField2.setText(Double.toString(newlinkedlist.get(index).getPrice()));
            jTextField21.setText(Integer.toString((int)(this.Left_Quantity)));
-
-//                if(newItem.toString().equals("Coke"))
-//                        jTextField2.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField2.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField2.setText("10 tk");
 
     }//GEN-LAST:event_cbItem2ActionPerformed
 
@@ -966,15 +923,7 @@ public class cafeteria extends javax.swing.JFrame {
         
 
         jTextField20.setText(Integer.toString((int)(this.Left_Quantity)));
-//                 
-//                 if(newItem.toString().equals("Coke"))
-//                        jTextField1.setText("20 tk");
-//                    else if(newItem.toString().equals("Pepsi"))
-//                            jTextField1.setText("18 tk");
-//                        else if(newItem.toString().equals("Shingara"))
-//                            jTextField1.setText("10 tk");
-//
-//    
+
             }
    
 
@@ -1019,13 +968,7 @@ public class cafeteria extends javax.swing.JFrame {
        tfAddPrice.setText("");
        tfAddQtty.setText("");
        refreshCB();
-//       cbItem1.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItem4.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItem5.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
-//       cbItemSelect.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
+
     }//GEN-LAST:event_bAddItemActionPerformed
 
     private void tfAddItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfAddItemMouseClicked

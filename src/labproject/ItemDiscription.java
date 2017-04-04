@@ -5,10 +5,7 @@
  */
 package labproject;
 
-/**
- *
- * @author sourav
- */
+
 public class ItemDiscription {
     private String itemName;
     private double price;
