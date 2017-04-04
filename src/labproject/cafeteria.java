@@ -1180,7 +1180,7 @@ public class cafeteria extends javax.swing.JFrame {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
                 jTextArea1.setText("                                                                                              "
-                + "CAFE BANGAL\n"
+                + "DIU CAFETERIA\n"
                 + "\nItem Name\t\tPrice\t\tQuantity\t\tTotal Price\n");
         String previousinput = jTextArea1.getText();
         String item;
