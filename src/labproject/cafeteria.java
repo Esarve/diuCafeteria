@@ -100,6 +100,7 @@ public class cafeteria extends javax.swing.JFrame {
         pfPassword = new javax.swing.JPasswordField();
         cbRemember = new javax.swing.JRadioButton();
         bLogin = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         ModificationPanel = new javax.swing.JPanel();
         bAddItem = new javax.swing.JButton();
         bDelete = new javax.swing.JButton();
@@ -367,7 +368,11 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel9.setText("Final Bill");
         mainPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
 
+        Modification_button.setBackground(new java.awt.Color(0, 102, 255));
+        Modification_button.setForeground(new java.awt.Color(255, 255, 255));
         Modification_button.setText("Edit Items");
+        Modification_button.setBorderPainted(false);
+        Modification_button.setFocusPainted(false);
         Modification_button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Modification_buttonActionPerformed(evt);
@@ -375,7 +380,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(Modification_button, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, -1, -1));
 
+        bLogOut.setBackground(new java.awt.Color(0, 102, 255));
+        bLogOut.setForeground(new java.awt.Color(255, 255, 255));
         bLogOut.setText("Log Out");
+        bLogOut.setBorderPainted(false);
+        bLogOut.setFocusPainted(false);
         bLogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bLogOutActionPerformed(evt);
@@ -383,7 +392,11 @@ public class cafeteria extends javax.swing.JFrame {
         });
         mainPanel.add(bLogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 590, -1, -1));
 
+        jButton4.setBackground(new java.awt.Color(0, 102, 255));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Order");
+        jButton4.setBorderPainted(false);
+        jButton4.setFocusPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -608,16 +621,35 @@ public class cafeteria extends javax.swing.JFrame {
         cbRemember.setText("Remember");
         loginPanel.add(cbRemember, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 393, -1, -1));
 
-        bLogin.setBackground(new java.awt.Color(45, 150, 255));
+        bLogin.setBackground(new java.awt.Color(0, 102, 255));
         bLogin.setForeground(new java.awt.Color(240, 240, 240));
         bLogin.setText("Log In");
+        bLogin.setBorderPainted(false);
+        bLogin.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         bLogin.setFocusPainted(false);
+        bLogin.setFocusable(false);
         bLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bLoginActionPerformed(evt);
             }
         });
         loginPanel.add(bLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 436, -1, -1));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 446, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 216, Short.MAX_VALUE)
+        );
+
+        loginPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 450, 220));
 
         ModificationPanel.setBackground(new java.awt.Color(255, 255, 255));
         ModificationPanel.setEnabled(false);
@@ -1678,6 +1710,7 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
