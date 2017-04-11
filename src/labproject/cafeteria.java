@@ -799,19 +799,20 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_pfPasswordActionPerformed
 
     private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
-//        if(tfUsername.getText().equalsIgnoreCase("admin")&&pfPassword.getText().equalsIgnoreCase("1234")){
-//           
-//        }
+        if(tfUsername.getText().equalsIgnoreCase("admin")&&pfPassword.getText().equalsIgnoreCase("1234")){
+           mainPanel.setVisible(true);
+           loginPanel.setVisible(false);
+           ModificationPanel.setVisible(false);
+           MainPanelInitialize();
+           String show_me_main_panel_after_login_button_press = "show me main panel after login button press";
+           ShowAccurateJpanel(show_me_main_panel_after_login_button_press);
+        }
+        else{
+            JFrame errorFrame = new JFrame("Error");
+            JOptionPane.showMessageDialog(errorFrame,"Username Password do not match!");
+        }
         
-        mainPanel.setVisible(true);
-        loginPanel.setVisible(false);
-        ModificationPanel.setVisible(false);
-        MainPanelInitialize();
         
-        
-        
-        String show_me_main_panel_after_login_button_press = "show me main panel after login button press";
-        ShowAccurateJpanel(show_me_main_panel_after_login_button_press);
         
         
     }//GEN-LAST:event_bLoginActionPerformed
