@@ -589,9 +589,7 @@ public class cafeteria extends javax.swing.JFrame {
         jLabel3.setText("Password:");
         loginPanel.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 354, -1, -1));
 
-        tfUsername.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
-        tfUsername.setForeground(new java.awt.Color(135, 140, 151));
-        tfUsername.setText("Enter Username");
+        tfUsername.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         tfUsername.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tfUsernameMouseClicked(evt);
@@ -604,8 +602,6 @@ public class cafeteria extends javax.swing.JFrame {
         });
         loginPanel.add(tfUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 307, 242, -1));
 
-        pfPassword.setForeground(new java.awt.Color(130, 135, 147));
-        pfPassword.setText("enter password");
         pfPassword.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pfPasswordMouseClicked(evt);
@@ -834,11 +830,11 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_BackButtonActionPerformed
 
     private void tfUsernameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tfUsernameMouseClicked
-        this.tfUsername.setText("");
+   
     }//GEN-LAST:event_tfUsernameMouseClicked
 
     private void pfPasswordMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pfPasswordMouseClicked
-        this.pfPassword.setText("");
+        
     }//GEN-LAST:event_pfPasswordMouseClicked
 
     private void bLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLogOutActionPerformed
