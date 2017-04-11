@@ -104,7 +104,7 @@ public class cafeteria extends javax.swing.JFrame {
         ModificationPanel = new javax.swing.JPanel();
         bAddItem = new javax.swing.JButton();
         bDelete = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        modify = new javax.swing.JButton();
         BackButton = new javax.swing.JButton();
         tfAddItem = new javax.swing.JTextField();
         tfAddPrice = new javax.swing.JTextField();
@@ -246,11 +246,11 @@ public class cafeteria extends javax.swing.JFrame {
             }
         });
         jTextField8.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField8KeyTyped(evt);
-            }
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 jTextField8KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField8KeyTyped(evt);
             }
         });
         mainPanel.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 70, 51, -1));
@@ -652,8 +652,12 @@ public class cafeteria extends javax.swing.JFrame {
         ModificationPanel.setPreferredSize(new java.awt.Dimension(736, 630));
         ModificationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        bAddItem.setBackground(new java.awt.Color(0, 102, 255));
         bAddItem.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bAddItem.setForeground(new java.awt.Color(255, 255, 255));
         bAddItem.setText("ADD");
+        bAddItem.setBorderPainted(false);
+        bAddItem.setFocusPainted(false);
         bAddItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bAddItemActionPerformed(evt);
@@ -661,8 +665,12 @@ public class cafeteria extends javax.swing.JFrame {
         });
         ModificationPanel.add(bAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 430, 101, 48));
 
+        bDelete.setBackground(new java.awt.Color(255, 51, 51));
         bDelete.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        bDelete.setForeground(new java.awt.Color(255, 255, 255));
         bDelete.setText("Delete");
+        bDelete.setBorderPainted(false);
+        bDelete.setFocusPainted(false);
         bDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bDeleteActionPerformed(evt);
@@ -670,14 +678,18 @@ public class cafeteria extends javax.swing.JFrame {
         });
         ModificationPanel.add(bDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, 101, 48));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jButton3.setText("Update Price");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        modify.setBackground(new java.awt.Color(0, 102, 255));
+        modify.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        modify.setForeground(new java.awt.Color(255, 255, 255));
+        modify.setText("Update Price");
+        modify.setBorderPainted(false);
+        modify.setFocusPainted(false);
+        modify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                modifyActionPerformed(evt);
             }
         });
-        ModificationPanel.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 130, 48));
+        ModificationPanel.add(modify, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 430, 130, 48));
 
         BackButton.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         BackButton.setText("Back");
@@ -967,7 +979,7 @@ public class cafeteria extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
         JFrame newFrame = new JFrame();
         Object newItem = cbItemSelect.getSelectedItem();
         int index=returnIndex(newItem);
@@ -983,7 +995,7 @@ public class cafeteria extends javax.swing.JFrame {
         
         JOptionPane.showMessageDialog(newFrame,"Done!");
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_modifyActionPerformed
 
     private void bAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddItemActionPerformed
         try {
@@ -1684,7 +1696,6 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbItemSelect;
     private javax.swing.JRadioButton cbRemember;
     private javax.swing.JLabel diuLogoLabel;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
@@ -1739,6 +1750,7 @@ public class cafeteria extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField9;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JButton modify;
     private javax.swing.JPasswordField pfPassword;
     private javax.swing.JTextField tfAddItem;
     private javax.swing.JTextField tfAddPrice;
