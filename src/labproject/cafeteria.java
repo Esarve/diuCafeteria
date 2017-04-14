@@ -987,15 +987,34 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void modifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_modifyActionPerformed
-        JFrame newFrame = new JFrame();
-        Object newItem = cbItemSelect.getSelectedItem();
-        int index=returnIndex(newItem);
+        String selected = cbItemSelect.getSelectedItem().toString();
+        double price= Double.parseDouble(tfInputPrice.getText());
+        this.conn= null;
+        this.stmt= null;
         try {
-            newlinkedlist.set(index,new ItemDiscription(newItem.toString(), Double.parseDouble(tfInputPrice.getText()), returnQtty(newItem)));
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(newFrame,"Valid Input Required");
-            return;
+            conn=DriverManager.getConnection(this.url);
+            System.out.println("Opened DB successfully for adding new items");
+            conn.setAutoCommit(false);
+            
+            stmt=conn.createStatement();
+            String sql="UPDATE `itemlist` SET `price`= "+price+" WHERE `name`='"+selected+"';";
+            stmt.executeUpdate(sql);
+            conn.commit();
+            System.out.println("Updated successfully!!!");
+            this.stmt.close();
+            this.conn.commit();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
         }
+        JFrame newFrame = new JFrame();
+//        Object newItem = cbItemSelect.getSelectedItem();
+//        int index=returnIndex(newItem);
+//        try {
+//            newlinkedlist.set(index,new ItemDiscription(newItem.toString(), Double.parseDouble(tfInputPrice.getText()), returnQtty(newItem)));
+//        } catch (Exception e) {
+//            JOptionPane.showMessageDialog(newFrame,"Valid Input Required");
+//            return;
+//        }
         refreshCB();
         tfDisplayPrice.setText("");
         tfInputPrice.setText("");
@@ -1005,17 +1024,39 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_modifyActionPerformed
 
     private void bAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bAddItemActionPerformed
+        String n = tfAddItem.getText();
+        double p = Double.parseDouble(tfAddPrice.getText());
+        int q = Integer.parseInt(tfAddQtty.getText());
+        this.conn = null;
+        this.stmt = null;
         try {
-           newlinkedlist.addLast(new ItemDiscription(tfAddItem.getText(),Double.parseDouble(tfAddPrice.getText()), Integer.parseInt(tfAddQtty.getText()))); 
-        } catch (Exception e) {
-            JFrame errorFrame = new JFrame("Error");
-            JOptionPane.showMessageDialog(errorFrame,"Please Try a valid input");
+            conn=DriverManager.getConnection(this.url);
+            System.out.println("Opened DB successfully for adding new items");
+            conn.setAutoCommit(false);
+            
+            stmt=conn.createStatement();
+            String sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('"+n+"','"+p+"',"+q+");";
+            stmt.executeUpdate(sql);
+            this.stmt.close();
+            this.conn.commit();
+        }catch(SQLException e){
+            System.err.println(e.getMessage());
         }
+        
+//        try {
+//           newlinkedlist.addLast(new ItemDiscription(tfAddItem.getText(),Double.parseDouble(tfAddPrice.getText()), Integer.parseInt(tfAddQtty.getText()))); 
+//        } 
+//        catch (Exception e) {
+//            JFrame errorFrame = new JFrame("Error");
+//            JOptionPane.showMessageDialog(errorFrame,"Please Try a valid input");
+//        }
        
        tfAddItem.setText("");
        tfAddPrice.setText("");
        tfAddQtty.setText("");
        refreshCB();
+       System.out.println("Check boxes are being refreshed...");
 
     }//GEN-LAST:event_bAddItemActionPerformed
 
@@ -1163,9 +1204,28 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField12KeyTyped
 
     private void bDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDeleteActionPerformed
-        Object newItem = cbDeleteItemList.getSelectedItem();
-        int index=returnIndex(newItem);
-        newlinkedlist.remove(index);
+        String selected=cbDeleteItemList.getSelectedItem().toString();
+        this.conn= null;
+        this.stmt= null;
+        try {
+            conn=DriverManager.getConnection(this.url);
+            System.out.println("Opened DB successfully for adding new items");
+            conn.setAutoCommit(false);
+            
+            stmt=conn.createStatement();
+            String sql="Delete from `itemlist` WHERE `name`='"+selected+"';";
+            stmt.executeUpdate(sql);
+            conn.commit();
+            System.out.println("Updated successfully!!!");
+            this.stmt.close();
+            this.conn.commit();
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        }
+
+//        Object newItem = cbDeleteItemList.getSelectedItem();
+//        int index=returnIndex(newItem);
+//        newlinkedlist.remove(index);
         refreshCB();
     }//GEN-LAST:event_bDeleteActionPerformed
 
@@ -1539,34 +1599,34 @@ public class cafeteria extends javax.swing.JFrame {
     }
     // Creating a linked list and returning an array of Strings
     LinkedList<ItemDiscription> newlinkedlist = new LinkedList<>();
-    boolean hasInitialized = false;
-    //hasInitialized is used as a flag. SO that the initilizations may run only once
     private String[] initializeLinkedlist(){
-        while(!hasInitialized){
+        while(!newlinkedlist.isEmpty()){
+            newlinkedlist.removeFirst();
+        }
             this.conn = null;
             this.stmt= null;
             try{
-            conn=DriverManager.getConnection(this.url);
-            System.out.println("Opened DB successfully");
-            conn.setAutoCommit(false);
-            
-            stmt=conn.createStatement();
-                this.rs = stmt.executeQuery( "SELECT * FROM `itemlist`;" );
-            while(rs.next()){
-                newlinkedlist.add(new ItemDiscription(rs.getString("name"),rs.getDouble("price"),rs.getInt("quantity")));
-            }
-            this.rs.close();
-            this.stmt.close();
-            this.conn.close();
-//            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
-//            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
-//            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
-//            newlinkedlist.add(new ItemDiscription("Shomucha", 8.0, 30));
-              hasInitialized=true;
+                conn=DriverManager.getConnection(this.url);
+                System.out.println("Opened DB successfully");
+                conn.setAutoCommit(false);
+
+                stmt=conn.createStatement();
+                    this.rs = stmt.executeQuery( "SELECT * FROM `itemlist`;" );
+                while(rs.next()){
+                    newlinkedlist.add(new ItemDiscription(rs.getString("name"),rs.getDouble("price"),rs.getInt("quantity")));
+                }
+                this.rs.close();
+                this.stmt.close();
+                this.conn.close();
+    //            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
+    //            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
+    //            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
+    //            newlinkedlist.add(new ItemDiscription("Shomucha", 8.0, 30));
+                  
             }catch(SQLException e){
                 System.err.println(e.getMessage());
             }
-        }
+        
         String array[] = new String[newlinkedlist.size()];
         for(int i=0;i<newlinkedlist.size();i++){
             array[i]=newlinkedlist.get(i).getItemName();
@@ -1576,6 +1636,7 @@ public class cafeteria extends javax.swing.JFrame {
     }
     
     private void refreshCB(){
+       
        cbItem1.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItem2.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItem3.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
@@ -1584,6 +1645,7 @@ public class cafeteria extends javax.swing.JFrame {
        cbItem6.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbItemSelect.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
        cbDeleteItemList.setModel(new javax.swing.DefaultComboBoxModel<>(initializeLinkedlist()));
+        System.out.println("Done!");
     }
     private int returnIndex(Object newItem){
         int i=0;
