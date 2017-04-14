@@ -20,18 +20,21 @@ public class cafeteria extends javax.swing.JFrame {
     public double Left_Quantity;
     public int OrderByUserQuantity;
     private String url="jdbc:sqlite:data.db";
-
+    public Connection conn;
+    public Statement stmt;
+    public ResultSet rs;
+    
 
     /**
      * Creates new form cafeteria
      */
     public cafeteria() {
+        addItemsDB();
         initComponents();
         mainPanel.setVisible(false);
          ModificationPanel.setVisible(false);
          loginPanel.setVisible(true);
         //createJDBC();
-        addItemsDB();
          
         
     }
@@ -1540,21 +1543,21 @@ public class cafeteria extends javax.swing.JFrame {
     //hasInitialized is used as a flag. SO that the initilizations may run only once
     private String[] initializeLinkedlist(){
         while(!hasInitialized){
-            Connection conn = null;
-            Statement stmt= null;
+            this.conn = null;
+            this.stmt= null;
             try{
             conn=DriverManager.getConnection(this.url);
             System.out.println("Opened DB successfully");
             conn.setAutoCommit(false);
             
             stmt=conn.createStatement();
-            ResultSet rs = stmt.executeQuery( "SELECT * FROM `itemlist`;" );
+                this.rs = stmt.executeQuery( "SELECT * FROM `itemlist`;" );
             while(rs.next()){
                 newlinkedlist.add(new ItemDiscription(rs.getString("name"),rs.getDouble("price"),rs.getInt("quantity")));
             }
-            rs.close();
-            stmt.close();
-            conn.close();
+            this.rs.close();
+            this.stmt.close();
+            this.conn.close();
 //            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
 //            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
 //            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
@@ -1700,7 +1703,7 @@ public class cafeteria extends javax.swing.JFrame {
     }
     
     private void createJDBC(){
-        Connection conn = null;
+         this.conn = null;
         try{
             conn = DriverManager.getConnection(this.url);
             System.out.println("Connection has been established");
@@ -1711,8 +1714,8 @@ public class cafeteria extends javax.swing.JFrame {
     }
     
     private void addItemsDB(){
-        Connection conn = null;
-        Statement stmt= null;
+        this.conn = null;
+        this.stmt= null;
         try{
             conn=DriverManager.getConnection(this.url);
             System.out.println("Opened DB successfully");
@@ -1735,9 +1738,8 @@ public class cafeteria extends javax.swing.JFrame {
                     "VALUES ('Cake','10.0',10);";
             stmt.executeUpdate(sql);
             
-            stmt.close();
-            conn.commit();
-            conn.close();
+            this.stmt.close();
+            this.conn.commit();
         }catch(SQLException e){
             System.err.println(e.getMessage());
         }
