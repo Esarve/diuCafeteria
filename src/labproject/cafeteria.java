@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 public class cafeteria extends javax.swing.JFrame {
     
-     public double Quantity , PRICE;
+     public double Quantity , PRICE , count = 1;
     public int Order_Quantity;
     public String QuantityToString;
     public double Left_Quantity;
@@ -23,6 +23,7 @@ public class cafeteria extends javax.swing.JFrame {
     public Connection conn;
     public Statement stmt;
     public ResultSet rs;
+    public boolean remember = false;
     
 
     /**
@@ -623,6 +624,16 @@ public class cafeteria extends javax.swing.JFrame {
         loginPanel.add(pfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(263, 348, 242, -1));
 
         cbRemember.setText("Remember");
+        cbRemember.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbRememberMouseClicked(evt);
+            }
+        });
+        cbRemember.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbRememberActionPerformed(evt);
+            }
+        });
         loginPanel.add(cbRemember, new org.netbeans.lib.awtextra.AbsoluteConstraints(174, 393, -1, -1));
 
         bLogin.setBackground(new java.awt.Color(0, 102, 255));
@@ -838,8 +849,7 @@ public class cafeteria extends javax.swing.JFrame {
            MainPanelInitialize();
            String show_me_main_panel_after_login_button_press = "show me main panel after login button press";
            ShowAccurateJpanel(show_me_main_panel_after_login_button_press);
-           tfUsername.setText("");
-           pfPassword.setText("");
+          
             }else{
                 JOptionPane.showMessageDialog(null,"Wrong password entered");
             }
@@ -884,6 +894,9 @@ public class cafeteria extends javax.swing.JFrame {
         ModificationPanel.setVisible(false);
         loginPanel.setVisible(true);
         isLoggedOut=true;
+        if(remember == false){
+            refreshnamepass();
+        }
     }//GEN-LAST:event_bLogOutActionPerformed
 
     private void Modification_buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Modification_buttonActionPerformed
@@ -1558,6 +1571,17 @@ public class cafeteria extends javax.swing.JFrame {
         jTextField12.setText("");
         jTextField18.setText("");
     }//GEN-LAST:event_jCheckBox5MouseReleased
+
+    private void cbRememberMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbRememberMouseClicked
+        // TODO add your handling code here:
+          count++;
+         if(count%2 == 0)remember = true;
+         else remember = false;
+    }//GEN-LAST:event_cbRememberMouseClicked
+
+    private void cbRememberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRememberActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbRememberActionPerformed
     
     private void addItemsToComboboxes(){
         cbItem1.addItem("COOOOOKKKEEE");
@@ -1839,7 +1863,10 @@ public class cafeteria extends javax.swing.JFrame {
             System.err.println(e.getMessage());
         }
     }
-    
+               public void refreshnamepass(){
+               tfUsername.setText("");
+               pfPassword.setText("");
+        }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BackButton;
