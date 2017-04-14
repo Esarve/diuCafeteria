@@ -815,19 +815,41 @@ public class cafeteria extends javax.swing.JFrame {
     }//GEN-LAST:event_pfPasswordActionPerformed
 
     private void bLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bLoginActionPerformed
-        if(tfUsername.getText().equalsIgnoreCase("admin")&&pfPassword.getText().equalsIgnoreCase("1234")){
-           mainPanel.setVisible(true);
+
+                    try {
+                Connection conn = SQLITEDB.ConnectDB();
+            String query = "select * from nameANDpass where Username=? and Password=? ";
+            PreparedStatement pst = conn.prepareStatement(query);
+            pst.setString(1,tfUsername.getText());
+            pst.setString(2,pfPassword.getText());
+            ResultSet rst = pst.executeQuery();
+            
+            int count = 0;
+            
+            while(rst.next()){
+                count+=1;
+            }
+            
+            if(count == 1){
+                
+                 mainPanel.setVisible(true);
            loginPanel.setVisible(false);
            ModificationPanel.setVisible(false);
            MainPanelInitialize();
            String show_me_main_panel_after_login_button_press = "show me main panel after login button press";
            ShowAccurateJpanel(show_me_main_panel_after_login_button_press);
+           tfUsername.setText("");
+           pfPassword.setText("");
+            }else{
+                JOptionPane.showMessageDialog(null,"Wrong password entered");
+            }
+            
+            
+            rst.close();
+            pst.close();
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, ex.toString() + "\n error coming from returning all Room Type DB Operation");
         }
-        else{
-            JFrame errorFrame = new JFrame("Error");
-            JOptionPane.showMessageDialog(errorFrame,"Username Password do not match!");
-        }
-        
         
         
         
