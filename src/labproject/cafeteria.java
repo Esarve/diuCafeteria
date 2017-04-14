@@ -29,12 +29,13 @@ public class cafeteria extends javax.swing.JFrame {
      * Creates new form cafeteria
      */
     public cafeteria() {
+        createJDBC();
         addItemsDB();
         initComponents();
         mainPanel.setVisible(false);
-         ModificationPanel.setVisible(false);
-         loginPanel.setVisible(true);
-        //createJDBC();
+        ModificationPanel.setVisible(false);
+        loginPanel.setVisible(true);
+        createJDBC();
          
         
     }
@@ -1767,8 +1768,18 @@ public class cafeteria extends javax.swing.JFrame {
     private void createJDBC(){
          this.conn = null;
         try{
-            conn = DriverManager.getConnection(this.url);
+            this.conn = DriverManager.getConnection(this.url);
+            this.stmt = conn.createStatement();
             System.out.println("Connection has been established");
+            String sql="CREATE TABLE IF NOT EXISTS `itemlist` ("+
+            "`name`	TEXT NOT NULL UNIQUE,"+
+            "`price`	REAL NOT NULL,"+
+            "`quantity`	INTEGER NOT NULL"+
+            ")";
+            this.stmt.executeUpdate(sql);
+            this.stmt.close();
+            this.conn.close();
+
         }catch(SQLException e){
             System.err.println(e.getMessage());
         }
