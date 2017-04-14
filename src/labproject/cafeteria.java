@@ -6,6 +6,7 @@
 package labproject;
 
 import java.awt.event.KeyEvent;
+import java.sql.*;
 import java.util.LinkedList;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -18,6 +19,7 @@ public class cafeteria extends javax.swing.JFrame {
     public String QuantityToString;
     public double Left_Quantity;
     public int OrderByUserQuantity;
+    private String url="jdbc:sqlite:data.db";
 
 
     /**
@@ -28,6 +30,8 @@ public class cafeteria extends javax.swing.JFrame {
         mainPanel.setVisible(false);
          ModificationPanel.setVisible(false);
          loginPanel.setVisible(true);
+        //createJDBC();
+        addItemsDB();
          
         
     }
@@ -1536,18 +1540,36 @@ public class cafeteria extends javax.swing.JFrame {
     //hasInitialized is used as a flag. SO that the initilizations may run only once
     private String[] initializeLinkedlist(){
         while(!hasInitialized){
-            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
-            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
-            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
-            newlinkedlist.add(new ItemDiscription("Shomucha", 8.0, 30));
-            hasInitialized=true;
+            Connection conn = null;
+            Statement stmt= null;
+            try{
+            conn=DriverManager.getConnection(this.url);
+            System.out.println("Opened DB successfully");
+            conn.setAutoCommit(false);
+            
+            stmt=conn.createStatement();
+            ResultSet rs = stmt.executeQuery( "SELECT * FROM `itemlist`;" );
+            while(rs.next()){
+                newlinkedlist.add(new ItemDiscription(rs.getString("name"),rs.getDouble("price"),rs.getInt("quantity")));
+            }
+            rs.close();
+            stmt.close();
+            conn.close();
+//            newlinkedlist.add(new ItemDiscription("Coke",20.0, 7));
+//            newlinkedlist.add(new ItemDiscription("Pepsi",18.0,7));
+//            newlinkedlist.add(new ItemDiscription("Shingara", 10.0, 20));
+//            newlinkedlist.add(new ItemDiscription("Shomucha", 8.0, 30));
+              hasInitialized=true;
+            }catch(SQLException e){
+                System.err.println(e.getMessage());
+            }
         }
-        
         String array[] = new String[newlinkedlist.size()];
         for(int i=0;i<newlinkedlist.size();i++){
             array[i]=newlinkedlist.get(i).getItemName();
         }
         return array;
+        
     }
     
     private void refreshCB(){
@@ -1675,6 +1697,50 @@ public class cafeteria extends javax.swing.JFrame {
         jCheckBox5.setSelected(false);
         jCheckBox6.setSelected(false);
         
+    }
+    
+    private void createJDBC(){
+        Connection conn = null;
+        try{
+            conn = DriverManager.getConnection(this.url);
+            System.out.println("Connection has been established");
+        }catch(SQLException e){
+            System.err.println(e.getMessage());
+        }
+        
+    }
+    
+    private void addItemsDB(){
+        Connection conn = null;
+        Statement stmt= null;
+        try{
+            conn=DriverManager.getConnection(this.url);
+            System.out.println("Opened DB successfully");
+            conn.setAutoCommit(false);
+            
+            stmt=conn.createStatement();
+            String sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('Coke','20.0',10);";
+            stmt.executeUpdate(sql);
+            sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('Pepsi','18.0',10);";
+            stmt.executeUpdate(sql);
+            sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('Singara','8',10);";
+            stmt.executeUpdate(sql);
+            sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('Somucha','10.0',10);";
+            stmt.executeUpdate(sql);
+            sql="INSERT OR REPLACE INTO `itemlist`(`name`,`price`,`quantity`)"+
+                    "VALUES ('Cake','10.0',10);";
+            stmt.executeUpdate(sql);
+            
+            stmt.close();
+            conn.commit();
+            conn.close();
+        }catch(SQLException e){
+            System.err.println(e.getMessage());
+        }
     }
     
 
